@@ -1,6 +1,60 @@
 <?php get_template_part('template-parts/header/header'); ?>
 
-<!-- Page Container -->
+
+<!-- Inseln-Section -->
+<div class="container rd-city-section">
+    <h2 class="page-h2">Inseln Section (Custom Post types)</h2>
+    <p class="intro-txt">Sorted ASC by Random</p>
+</div>
+<!-- Inseln Container -->
+<div class="container city-section-cnt">
+    <?php 
+    $newestCountries = new WP_Query(array( 
+        'posts_per_page'=> 9, 
+        'post_type' => 'land',
+        'orderby' => 'rand'
+        )); 
+    while ($newestCountries->have_posts()) {
+        $newestCountries->the_post(); ?>
+    <div class="col-sm-4 city-box">
+        <div class="flx-circle-post">
+            <a href="<?php the_permalink()?>"></a>
+            <div class="col-sm-12 card card-rd">
+                <a href="<?php the_permalink();?>" class="thumb-a">
+                    <?php the_post_thumbnail('cityBoxImagesThumbnails', array('class' =>
+                'card-img-top', 'alt' => '...')); ?>
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="<?php the_permalink(); ?>">
+                            <?php the_title(); ?>
+                        </a>
+                    </h5>
+                    <p class="card-text"><?php echo  get_the_excerpt(); ?></p>
+                    <!-- <p class="card-text"><?php echo wp_trim_words(get_the_content(), 10 ); ?></p> -->
+                    <a href="<?php the_permalink()?>" class="btn btn-posts btn-startpage">Mehr zu
+                        <?php the_title();?>
+                        &raquo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php
+        }
+        wp_reset_postdata();
+        ?>
+</div>
+<!-- Ende Inseln Container -->
+<!-- Alle Inseln Button -->
+<div class="container">
+    <p class="lead cta-flex city-sec">
+        <a class="btn btn-posts btn-lg btn-start-city" href="<?php echo get_post_type_archive_link( 'insel' )?>"
+            role="button">Alle Inseln &raquo</a>
+    </p>
+</div>
+
+
+<!-- You Tube Section -->
 <div class="page-content-cnt">
     <!-- Big Video Section -->
     <h2 class="page-h2">Meine Videos auf reisedurstig - youtube Channel</h2>
@@ -77,7 +131,6 @@
         </p>
     </div>
 </div>
-
 
 
 <!-- Länder-Section -->
@@ -250,71 +303,71 @@
             </div>
         </div>
 </section>
+</div>
+
 
 <!-- Planet Section -->
-        <div class="page-content-cnt">
-            <h2 class="page-h2">Special Section Planeten (Custom Post Type)</h2>
+<div class=" container-md counter-cnt">
+    <div class="page-content-cnt">
+        <h2 class="page-h2">Special Section Planeten (Custom Post Type)</h2>
+        <div class="container">
+            <p class="lead cta-flex">
+                <!-- Planeten Container -->
+            <div class="container news-section-startpage-cnt">
+                <!-- Mit WP_Query kann ich bestimmte Daten abfragen -->
+                <?php $newestPosts = new WP_Query(array( 'posts_per_page' => 3, 'post_type' =>
+            'planet' )); while ($newestPosts->have_posts()) { $newestPosts->the_post(); ?>
+                <div class="col-sm-4">
+                    <div class="flx-circle-post">
+                        <a href="<?php the_permalink()?>">
+                            <div class="date-rounded">
+                                <p class="day-p"><?php the_time('d') ?></p>
+                                <p class="month-p"><?php the_time('M') ?></p>
+                            </div>
+                        </a>
 
-            <div class="container">
-                <p class="lead cta-flex">
-                    <!-- Planeten Container -->
-                <div class="container news-section-startpage-cnt">
-                    <!-- Mit WP_Query kann ich bestimmte Daten abfragen -->
-                    <?php $newestPosts = new WP_Query(array( 'posts_per_page' => 3, 'post_type' =>
-                'planet' )); while ($newestPosts->have_posts()) { $newestPosts->the_post(); ?>
-                    <div class="col-sm-4">
-                        <div class="flx-circle-post">
-                            <a href="<?php the_permalink()?>">
-                                <div class="date-rounded">
-                                    <p class="day-p"><?php the_time('d') ?></p>
-                                    <p class="month-p"><?php the_time('M') ?></p>
-                                </div>
-                            </a>
-
-                            <div class="col-m-12 card card-rd">
-                                <?php the_post_thumbnail('cityBoxImagesThumbnails', array('class' =>
-                                'card-img-top', 'alt' => '...')); ?>
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <a href="<?php the_permalink(); ?>">
-                                            <?php the_title() ?>
-                                        </a>
-                                    </h5>
-                                    Hier erfolgt eine Abfrage excerpt vs content
-                                    <p>
-                                        <!-- Abfrage-> wenn excerpt zeige an, sonst zeige the_content -->
-                                        <?php if (has_excerpt()) {
-                                    echo get_the_excerpt();
-                                } else {
-                                    wp_trim_words(get_the_content(), 7);
-                                } ?>
-                                    </p>
-                                    <hr>
-                                    Loop from Content:
-                                    <p class="card-text"><?php echo wp_trim_words(get_the_content(), 10 ); ?></p>
-                                    Loop from Excerpt:
-                                    <p class="excerpt-p">
-                                        <?php the_excerpt( );?>
-                                    </p>
-                                    <a href="<?php the_permalink()?>" class="btn btn-posts btn-startpage">Mehr Erfahren &raquo</a>
-                                </div>
+                        <div class="col-m-12 card card-rd">
+                            <?php the_post_thumbnail('cityBoxImagesThumbnails', array('class' =>
+                            'card-img-top', 'alt' => '...')); ?>
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php the_title() ?>
+                                    </a>
+                                </h5>
+                                Hier erfolgt eine Abfrage excerpt vs content
+                                <p>
+                                    <!-- Abfrage-> wenn excerpt zeige an, sonst zeige the_content -->
+                                    <?php if (has_excerpt()) {
+                                echo get_the_excerpt();
+                            } else {
+                                wp_trim_words(get_the_content(), 7);
+                            } ?>
+                                </p>
+                                <hr>
+                                Loop from Content:
+                                <p class="card-text"><?php echo wp_trim_words(get_the_content(), 10 ); ?></p>
+                                Loop from Excerpt:
+                                <p class="excerpt-p">
+                                    <?php the_excerpt( );?>
+                                </p>
+                                <a href="<?php the_permalink()?>" class="btn btn-posts btn-startpage">Mehr Erfahren &raquo</a>
                             </div>
                         </div>
                     </div>
-
-                    <?php
-        }
-        wp_reset_postdata();
-        ?>
                 </div>
-                </p>
+                <?php }
+                wp_reset_postdata();
+                ?>
             </div>
+            </p>
         </div>
-        <div class="container container-btn">
-            <a class="btn btn-posts btn-lg" href="<?php echo site_url('/planets');?>" role="button">Alle Planeten
-                &raquo</a>
-        </div>
-
+    </div>
+    <div class="container container-btn">
+        <a class="btn btn-posts btn-lg" href="<?php echo site_url('/planets');?>" role="button">Alle Planeten
+            &raquo</a>
+    </div>
 </div>
 
+<!-- Footer Section -->
 <?php get_footer(); ?>
