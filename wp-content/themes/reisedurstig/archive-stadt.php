@@ -29,7 +29,7 @@
                     </h2>
                     <a class="land-archive-a" href="<?php echo home_url('/land/' . sanitize_title(get_field('land'))); ?>"><?php echo get_field('land'); ?></a>
                 </div>
-                 <?php echo get_the_date(); ?> von test -->
+                 <?php echo get_the_date(); ?>
 
                         <!-- <?php the_author_posts_link(); ?>  -->
                         <!-- im Themenbereich "<?php echo get_the_category_list(', ');?>" -->
