@@ -77,7 +77,7 @@
                     <div class="container hero-btn-cnt">
                                     <!-- Die esc_url-Funktion wird verwendet, um die URL zu bereinigen und sicherzustellen, dass sie ordnungsgemäß formatiert ist. Damit sollte 
                                     die gerenderte URL korrekt sein und nicht mehr die relative URL zeigen, die du genannt hast. -->
-                                    <a class="btn btn-startpage" href="<?php echo esc_url( get_theme_mod('reisedurstig-button-link') ); ?>" target  ="_blank" role="button">Learn more</a>      
+                                    <a class="btn btn-startpage" href="<?php echo esc_url( get_theme_mod('reisedurstig-button-link') ); ?>" target  ="_blank" role="button"><?php echo get_theme_mod( 'reisedurstig-button-text' )?></a>      
                                 </p>
                         </div>
                 </div>

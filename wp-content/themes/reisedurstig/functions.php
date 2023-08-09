@@ -158,6 +158,19 @@ function reisedurstig_startpage_edit($wp_customize){
       'placeholder' => __( 'http://www.google.com' ),
     ),
   )));
+// now want input fields for 'Button-Label'
+  $wp_customize->add_setting('reisedurstig-button-text', array(
+    // placeholder for input-field
+    'default'=>'CTA-Text',
+  ));
+// now want input fields for 'Button-Label'
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
+  'reisedurstig-button-text-control' , array (
+    'type'=> 'text',
+    'label'=>'Call-to-Action Text',
+    'section'=> 'reisedurstig-startpage-section',
+    'settings'=> 'reisedurstig-button-text'
+  )));
   // now want input fields for 'Google Maps URL'
   $wp_customize->add_setting('reisedurstig-gmaps-url', array(
     // placeholder for input-field
