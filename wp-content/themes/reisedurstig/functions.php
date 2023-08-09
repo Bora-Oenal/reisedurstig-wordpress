@@ -107,6 +107,109 @@ function stadt_query_modifications($query){
 //when we want run this function
 add_action('pre_get_posts' , 'stadt_query_modifications');
 
+// Funktion zum Rendern der Theme-Einstellungsseite
+function mytheme_render_theme_settings_page() {
+	?>
+	<div class="wrap">
+		<h1>Theme Settings</h1>
+		<form method="post" action="options.php">
+			<?php settings_fields('theme-settings-group'); ?>
+			<?php do_settings_sections('theme-settings'); ?>
+			<?php submit_button(); ?>
+		</form>
+	</div>
+	<?php
+}
+
+// Funktion zum Registrieren der Theme-Einstellungsseite
+function mytheme_register_theme_settings_page() {
+	add_theme_page(
+		'Theme Settings',
+		'Theme Settings',
+		'manage_options',
+		'theme-settings',
+		'mytheme_render_theme_settings_page'
+	);
+
+	// Füge die einzelnen Felder zur Seite hinzu
+	add_settings_section(
+		'ct_custom_theme_settings_section',
+		'Theme Settings Section',
+		'',
+		'theme-settings'
+	);
+
+	add_settings_field(
+		'logo_image',
+		'Logo Image',
+		'mytheme_render_logo_field',
+		'theme-settings',
+		'ct_custom_theme_settings_section'
+	);
+
+	add_settings_field(
+		'phone_number',
+		'Phone Number',
+		'mytheme_render_phone_number_field',
+		'theme-settings',
+		'ct_custom_theme_settings_section'
+	);
+
+	add_settings_field(
+		'address',
+		'Address Information',
+		'mytheme_render_address_field',
+		'theme-settings',
+		'ct_custom_theme_settings_section'
+	);
+
+	add_settings_field(
+		'fax_number',
+		'Fax Number',
+		'mytheme_render_fax_number_field',
+		'theme-settings',
+		'ct_custom_theme_settings_section'
+	);
+
+	add_settings_field(
+		'social_media_links',
+		'Social Media Links',
+		'mytheme_render_social_media_links_field',
+		'theme-settings',
+		'ct_custom_theme_settings_section'
+	);
+
+	// Registriere die Einstellungen
+	register_setting(
+		'theme-settings-group',
+		'logo_image'
+	);
+
+	register_setting(
+		'theme-settings-group',
+		'phone_number'
+	);
+
+	register_setting(
+		'theme-settings-group',
+		'address'
+	);
+
+	register_setting(
+		'theme-settings-group',
+		'fax_number'
+	);
+
+	register_setting(
+		'theme-settings-group',
+		'social_media_links'
+	);
+}
+
+// Registriere die Theme-Einstellungsseite
+add_action('admin_menu', 'mytheme_register_theme_settings_page');
+
+
 
 
 // Customizer Options
