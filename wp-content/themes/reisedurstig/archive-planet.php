@@ -1,5 +1,5 @@
 <?php get_template_part('template-parts/header/header-archive-planet'); ?>
-ARCHIVE-PLANET.PHP
+
 <!-- Page Container -->
 <div class="container container--narrow page-section city-section-cnt">
     <h2 class="page-h2">Planeten</h2>
