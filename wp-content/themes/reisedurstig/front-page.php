@@ -69,7 +69,13 @@
         <div class="youtube-video-rows">
         </div>
     </div> -->
-
+    <!-- YouTube Channel - Button -->
+    <div class="container">
+        <p class="lead cta-flex city-sec youtube-btn">
+            <a class="btn btn-posts btn-lg btn-start-city" href="https://www.youtube.com/@reisedurstig4152"
+                target="_blank" role="button">Reisedurstig YouTube Channel &raquo</a>
+        </p>
+    </div>
 </div>
 
 
