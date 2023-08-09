@@ -3,12 +3,11 @@ const API_KEY = 'AIzaSyCKPIR5f_UP6lG-PxRba81nFe8z4wkJ6QA';
 // YouTube Kanal-ID
 const CHANNEL_ID = 'UCtpKNaYEVALJr_iT1l5xzVw';
 // Anzahl der anzuzeigenden Videos
-const MAX_RESULTS = 10;
+const MAX_RESULTS = 7;
 
 // API-Anfrage zur Abfrage der Videos
 const apiUrl = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&order=date&part=snippet&type=video&maxResults=${MAX_RESULTS}`;
 
-// Funktion zum Laden der Videos
 // Funktion zum Laden der Videos
 async function loadVideos() {
     const response = await fetch(apiUrl);
