@@ -3,7 +3,7 @@
 <!-- Page Container -->
 <div class="page-content-cnt">
     <!-- Big Video Section -->
-    <h2 class="page-h2" ">Meine Videos auf reisedurstig - youtube Channel</h2>
+    <h2 class="page-h2">Meine Videos auf reisedurstig - youtube Channel</h2>
 
     <!-- Dynamic You Tube Section (Own Plugin) -->
     <div class="container-md video-cnt mx-width">
