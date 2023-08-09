@@ -4,7 +4,7 @@
     <section class="container d-flex">
         <!-- Left -->
         <div>
-            <span>Get connected with us on social networks:</span>
+            <span class="footer-span">Get connected with us on social networks:</span>
         </div>
         <!-- Left -->
 

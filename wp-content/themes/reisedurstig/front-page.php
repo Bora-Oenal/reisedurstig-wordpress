@@ -15,9 +15,6 @@
     </div>
 
 
-
-    <!-- Big You Tube - Video Section -->
-
     <!-- <div class=" container-md video-cnt">
         <div class="ratio ratio-16x9">
             <iframe class="" src="https://www.youtube.com/embed/QhSqEKZjagM" title="YouTube video"
@@ -200,15 +197,21 @@
 <div class=" container-md google-maps-cnt">
     <h2 class="page-h2" ">Where I have Been</h2>
     <div class=" ratio ratio-16x9">
+            <!-- <iframe
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=medellin%20castilla+(My%20Business%20Name)&amp;t=&amp;z=5&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe> -->
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96714.68291250926!2d-74.05953969406828!3d40.75468158321536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2588f046ee661%3A0xa0b3281fcecc08c!2sManhattan%2C%20Nowy%20Jork%2C%20Stany%20Zjednoczone!5e0!3m2!1spl!2spl!4v1672242259543!5m2!1spl!2spl"
-                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                src="<?php echo esc_url( get_theme_mod('reisedurstig-gmaps-url') ); ?>"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
     </div>
 </div>
 
 <!-- Counter-Section -->
 <div class=" container-md counter-cnt">
-    <h2 class="page-h2" ">Reisedurstig in Zahlen</h2>
+    <h2 class="page-h2">Reisedurstig in Zahlen</h2>
 <!-- Counter -->
 <section class=" wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">
         <div class="container">
@@ -219,7 +222,7 @@
                     style="visibility: visible; animation-duration: 300ms; animation-name: fadeInUp;">
                     <span id="anim-number-pizza" class="counter-number"></span>
                     <span class="timer counter alt-font appear" data-to="980" data-speed="7000">5</span>
-                    <p class="counter-title">Beer Ordered</p>
+                    <p class="counter-title">Kontinente</p>
                 </div>
                 <!-- end counter -->
                 <!-- counter -->
@@ -262,7 +265,7 @@
                                 </div>
                             </a>
 
-                            <div class="col-sm-9 card card-rd">
+                            <div class="col-m-12 card card-rd">
                                 <?php the_post_thumbnail('cityBoxImagesThumbnails', array('class' =>
                                 'card-img-top', 'alt' => '...')); ?>
                                 <div class="card-body">
@@ -287,10 +290,7 @@
                                     <p class="excerpt-p">
                                         <?php the_excerpt( );?>
                                     </p>
-                                    <div class="container">
-                                        hallo
-                                        <a href="<?php the_permalink()?>" class="btn btn-posts">Mehr Erfahren &raquo</a>
-                                    </div>
+                                    <a href="<?php the_permalink()?>" class="btn btn-posts btn-startpage">Mehr Erfahren &raquo</a>
                                 </div>
                             </div>
                         </div>

@@ -158,6 +158,22 @@ function reisedurstig_startpage_edit($wp_customize){
       'placeholder' => __( 'http://www.google.com' ),
     ),
   )));
+  // now want input fields for 'Google Maps URL'
+  $wp_customize->add_setting('reisedurstig-gmaps-url', array(
+    // placeholder for input-field
+    'default'=>'URL',
+  ));
+  // now want input fields for 'Google Maps URL'
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize,
+  'reisedurstig-gmaps-url-control' , array (
+    'type'=> 'url',
+    'label'=>'Google Maps URL',
+    'section'=> 'reisedurstig-startpage-section',
+    'settings'=> 'reisedurstig-gmaps-url',
+    'input_attrs' => array(
+      'placeholder' => __( 'http://www.google.com' ),
+    ),
+  )));
 }
 //when we want run this function
 add_action( 'customize_register' , 'reisedurstig_startpage_edit' ); 

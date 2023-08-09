@@ -232,7 +232,7 @@ ul.navbar-nav.mr-auto li a:hover {
 a.social-icon-settings {
     color: #FFFFFF;
     margin: 0 10px;
-    font-size: 8px;
+    font-size: 18px;
     cursor: pointer;
 }
 .social-icons:hover,
@@ -553,8 +553,6 @@ p.lead.cta-flex {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    top: 80px;
     margin-bottom: 120px;
 }
 .youtube-video-rows {
@@ -585,7 +583,7 @@ p.hdl-subliner {
     max-width: 1125px;
 }
 p.lead.cta-flex.city-sec {
-    margin: 30px 0 100px;
+    margin: 0;
 }
 .generic-code {
     margin-bottom: 20px;
@@ -790,6 +788,10 @@ a.single-post-title:hover {
     display: flex;
     padding: 40px 0 100px;
 }
+a.btn.btn-posts.btn-planets {
+    bottom: 0;
+    position: absolute;
+}
 /* Footer */
 footer {
     background-color: #1D62B3;
@@ -805,7 +807,8 @@ section.d-flex {
     margin: 0 auto;
     min-width: 100%;
     padding: 16px;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 80px;
 }
 .footer-col {
     padding: 50px 10px;
@@ -904,14 +907,18 @@ a.text-reset.footer-links-a:hover {
     background-color: #1D62B3;
     color: #FFFFFF;
 }
+span.footer-span,
 a.footer-social-icon.me-4.text-reset {
     text-decoration: unset;
+    font-size:14px;
+    color: #1D62B3!important;
+    font-weight: 500;
 }
 footer.text-center.text-lg-start.bg-light.text-muted {
     margin-top: 50px;
 }
-a.footer-social-icon.me-4.text-reset {
-    text-decoration: unset;
+a.footer-social-icon.me-4.text-reset i:hover{
+    color: #FFFFFF;
 }
 .footer-social-icon {
     text-decoration: unset;
@@ -972,6 +979,10 @@ p.footer-p {
 .container.city-section-cnt {
     flex-wrap: wrap;
     display: flex;
+    margin-bottom: 40px;
+}
+.container.rd-city-section {
+    margin-top: 20px;
 }
 .col-sm-4.city-box {
     margin: 0 0 40px;
