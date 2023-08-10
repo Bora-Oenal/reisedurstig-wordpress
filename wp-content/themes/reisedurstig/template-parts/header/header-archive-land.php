@@ -68,7 +68,7 @@
                             class="align-self-center text-center text-light col-md-8 offset-md-2">
                             <div class="lc-block mb-4">
                                 <div editable="rich">
-                                    <h1 class="display-1 hero-hdl">Alle Länder - Länder Archive</h1>
+                                    <h1 class="display-1 hero-hdl"><?php post_type_archive_title();?></h1>
                                     <p class="hdl-subliner">Entdecke die Welt: Tauche ein in die faszinierende Vielfalt der Länder Archive</p>
                                 </div>
                             </div>

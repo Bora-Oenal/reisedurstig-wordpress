@@ -2,7 +2,7 @@
 
 <!-- Page Container -->
 <div class="container container--narrow page-section city-section-cnt">
-    <h2 class="page-h2">Alle Städte</h2>
+    <h2 class="page-h2"><?php post_type_archive_title();?></h2>
     <div class="row">
         <!-- Ab hier loopen wir immer mit while -->
         <!-- hier aber ohne wp_query, somit werden alle posts angezeigts -->

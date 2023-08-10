@@ -13,17 +13,17 @@
             <div class="d-flex min-vh-100 video-cnt" lc-helper="video-bg">
                 <!-- Video -->
                 <!-- Für das Ermöglichen der Auswahl im Customizer -->
-               <!-- Dieser Code zeigt das ausgewählte Hero Video für die Stadt-Archivseite an -->
+                <!-- Dieser Code zeigt das ausgewählte Hero Video für die Insel-Archivseite an -->
 
                 <?php
-                // Holen der Hero Video Einstellung für die Stadt-Archivseite
-                $hero_video_archive_stadt_id = get_theme_mod( 'hero_video_archive_stadt_id' );
+                // Holen der Hero Video Einstellung für die Insel-Archivseite
+                $hero_video_archive_strand_id = get_theme_mod( 'hero_video_archive_strand_id' );
 
                 // Die URL des ausgewählten Hero Videos erhalten
-                $hero_video_archive_stadt_url = wp_get_attachment_url( $hero_video_archive_stadt_id );
+                $hero_video_archive_strand_url = wp_get_attachment_url( $hero_video_archive_strand_id );
 
                 // Wenn eine URL vorhanden ist, das Video anzeigen
-                if ( ! empty( $hero_video_archive_stadt_url ) ) :
+                if ( ! empty( $hero_video_archive_strand_url ) ) :
                 ?>
                     <video
                         class="position-absolute w-100 header-video-bg"
@@ -33,12 +33,10 @@
                         loop=""
                         playsinline="">
                         <source
-                            src="<?php echo esc_url( $hero_video_archive_stadt_url ); ?>"
+                            src="<?php echo esc_url( $hero_video_archive_strand_url ); ?>"
                             type="video/mp4">
                     </video>
                 <?php endif; ?>
-
-
 
 
                 <!-- <video
@@ -49,7 +47,7 @@
                     loop=""
                     playsinline="">
                     <source
-                        src="<?php echo get_template_directory_uri(); ?>/assets/videos/istanbul.mp4"
+                        src="<?php echo get_template_directory_uri(); ?>/assets/videos/laender-video.mp4"
                         type="video/mp4">
                 </video> -->
                 <div class="overlay"></div>
@@ -61,7 +59,6 @@
                         <!-- Navbar -->
                         <?php get_template_part('template-parts/navbar'); ?>
                     </div>
-
                     <!-- Hero-Container -->
                     <div class="container hero-cnt">
                         <!-- Hero-Title -->
@@ -71,7 +68,7 @@
                             <div class="lc-block mb-4">
                                 <div editable="rich">
                                     <h1 class="display-1 hero-hdl"><?php post_type_archive_title();?></h1>
-                                    <p class="hdl-subliner">Erkunde die Vielfalt unserer Städte - Städtearchive entdecken</p>
+                                    <p class="hdl-subliner">Inseln sind wie kleine Welten, die inmitten des Ozeans der Zeit ruhen, während das Leben um sie herum fließt.</p>
                                 </div>
                             </div>
                         </div>

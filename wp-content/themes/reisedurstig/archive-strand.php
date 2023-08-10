@@ -1,19 +1,19 @@
-<?php get_template_part('template-parts/header/header-archive-insel'); ?>
+<?php get_template_part('template-parts/header/header-archive-strand'); ?>
 
 <!-- Page Container -->
 <div class="container container--narrow page-section city-section-cnt">
-    <h2 class="page-h2">Alle Inseln</h2>
+    <h2 class="page-h2"><?php post_type_archive_title()?></h2>
     <div class="row">
         <!-- Ab hier loopen wir immer mit while -->
         <!-- hier aber ohne wp_query, somit werden alle posts angezeigts -->
         <?php
-        $alleInseln = new WP_Query(array( 
+        $alleStraende = new WP_Query(array( 
             'posts_per_page'=> -1, 
-            'post_type' => 'Insel', 
+            'post_type' => 'strand', 
             'orderby' => 'rand'
         ));
-        while($alleInseln->have_posts()){ 
-            $alleInseln->the_post(); ?>
+        while($alleStraende->have_posts()){ 
+            $alleStraende->the_post(); ?>
             <div class="col-sm-4 city-box-archive">
                 <div class="city-box-wrapper card">
                     <div class="post-item">
