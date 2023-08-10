@@ -219,7 +219,8 @@ add_action('admin_menu', 'mytheme_register_theme_settings_page');
 function reisedurstig_startpage_edit($wp_customize){
   $wp_customize->add_section('reisedurstig-startpage-section',array(
     //appearance in Admin-area
-    'title' => 'Startpage Edit'
+    'title' => 'Startpage Edit',
+    'priority' => 10
   ));
 // now want input fields for 'Slogan'
   $wp_customize->add_setting('reisedurstig-hero-slogan', array(
@@ -298,7 +299,8 @@ add_action( 'customize_register' , 'reisedurstig_startpage_edit' );
 function reisedurstig_youtube_section_integration($wp_customize){
   $wp_customize->add_section('reisedurstig-youtube-section',array(
     //appearance in Admin-area
-    'title' => 'YouTube Section'
+    'title' => 'YouTube Section',
+    'priority' => 12,
   ));
     // now want input fields for 'YouTube API-key'
     $wp_customize->add_setting('reisedurstig-yt-api-key', array(
@@ -472,7 +474,7 @@ function custom_theme_customizer( $wp_customize ) {
     // Create 'Hero Videos for All Pages' Section in Customizer
     $wp_customize->add_section( 'common_hero_videos_section', array(
         'title' => 'Hero Videos for All Pages',
-        'priority' => 30,
+        'priority' => 11,
     ) );
   
     $pages = array(
@@ -507,7 +509,7 @@ function custom_theme_customizer( $wp_customize ) {
         // Create 'Website Logo' Section in Customizer
         $wp_customize->add_section( 'common_logo_section', array(
             'title' => 'Website Logo',
-            'priority' => 30,
+            'priority' => 5,
         ) );
 
         // Logo ID Setting
@@ -529,8 +531,10 @@ function custom_theme_customizer( $wp_customize ) {
   //when we want run this function
   add_action( 'customize_register', 'custom_theme_customizer' );
   
-  // Diese Funktion ermöglicht die Parameterübergabe von Customizer an JS-Datei (reisedurstig-youtube-plugin)
-  function enqueue_custom_script_in_plugin() {
+
+
+// Diese Funktion ermöglicht die Parameterübergabe (Youtube-Api) von Customizer an JS-Datei (reisedurstig-youtube-plugin)
+function enqueue_custom_script_in_plugin() {
     wp_enqueue_script('custom-plugin-script', plugin_dir_url( __FILE__ ) . '../../plugins/reisedurstig-youtube-plugin/youtube-script.js', array(), null, true);
 
     $api_key = get_theme_mod('reisedurstig-yt-api-key');
