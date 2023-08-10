@@ -5,3 +5,5 @@ wpvividbackups/
 wp-content/themes/.DS_Store
 wp-content/.DS_Store
 wp-content/wpvividbackups/wpvivid_log/wpvivid-64d2b812e04ce_backup_log.txt
+wp-content/languages/plugins/wpvivid-backuprestore-de_DE.po
+wp-content/languages/plugins/wpvivid-backuprestore-de_DE.mo

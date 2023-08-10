@@ -4,18 +4,18 @@
 <!-- Inseln-Section -->
 <div class="container rd-city-section">
     <h2 class="page-h2">Inseln Section (Custom Post types)</h2>
-    <p class="intro-txt">Sorted ASC by Random</p>
+    <p class="intro-txt">Sorted Random</p>
 </div>
 <!-- Inseln Container -->
 <div class="container city-section-cnt">
     <?php 
-    $newestCountries = new WP_Query(array( 
-        'posts_per_page'=> 9, 
-        'post_type' => 'land',
+    $alleInseln = new WP_Query(array( 
+        'posts_per_page'=> 3, 
+        'post_type' => 'insel',
         'orderby' => 'rand'
         )); 
-    while ($newestCountries->have_posts()) {
-        $newestCountries->the_post(); ?>
+    while ($alleInseln->have_posts()) {
+        $alleInseln->the_post(); ?>
     <div class="col-sm-4 city-box">
         <div class="flx-circle-post">
             <a href="<?php the_permalink()?>"></a>
@@ -142,7 +142,7 @@
 <div class="container city-section-cnt">
     <?php 
     $newestCountries = new WP_Query(array( 
-        'posts_per_page'=> 9, 
+        'posts_per_page'=> 6, 
         'post_type' => 'land',
         'orderby' => 'rand'
         )); 
@@ -196,7 +196,7 @@
     <?php 
     $today = date('Ymd'); 
     $newestCities = new WP_Query(array( 
-        'posts_per_page'=> 9, 
+        'posts_per_page'=> 6, 
         'post_type' => 'stadt', 
         'meta_key' => 'reisedatum', 
         'orderby' => 'meta_value_num', 
@@ -306,6 +306,67 @@
 </div>
 
 
+<!-- Strände Section -->
+<div class=" container-md counter-cnt">
+    <div class="page-content-cnt">
+        <h2 class="page-h2">Special Section Strände (Custom Post Type)</h2>
+        <div class="container">
+            <p class="lead cta-flex">
+                <!-- Strände Container -->
+            <div class="container news-section-startpage-cnt">
+                <!-- Mit WP_Query kann ich bestimmte Daten abfragen -->
+                <?php 
+                $allBeaches = new WP_Query(array( 
+                    'posts_per_page' => 6, 
+                    'post_type' => 'strand' )); 
+                while (
+                 $allBeaches->have_posts()) { 
+                    $allBeaches->the_post(); ?>
+                <div class="col-sm-4">
+                    <div class="flx-circle-post">
+                        <div class="col-m-12 card card-rd">
+                            <?php the_post_thumbnail('cityBoxImagesThumbnails', array('class' =>
+                            'card-img-top', 'alt' => '...')); ?>
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php the_title() ?>
+                                    </a>
+                                </h5>
+                                Hier erfolgt eine Abfrage excerpt vs content
+                                <p>
+                            <!-- Abfrage-> wenn excerpt zeige an, sonst zeige the_content -->
+                            <?php if (has_excerpt()) {
+                                echo get_the_excerpt();
+                            } else {
+                                wp_trim_words(get_the_content(), 7);
+                            } ?>
+                                </p>
+                                <hr>
+                                Loop from Content:
+                                <p class="card-text"><?php echo wp_trim_words(get_the_content(), 10 ); ?></p>
+                                Loop from Excerpt:
+                                <p class="excerpt-p">
+                                    <?php the_excerpt( );?>
+                                </p>
+                                <a href="<?php the_permalink()?>" class="btn btn-posts btn-startpage">Mehr Erfahren &raquo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php }
+                wp_reset_postdata();
+                ?>
+            </div>
+            </p>
+        </div>
+    </div>
+    <div class="container container-btn">
+        <a class="btn btn-posts btn-lg" href="<?php echo site_url('/planets');?>" role="button">Alle Planeten
+            &raquo</a>
+    </div>
+</div>
+
 <!-- Planet Section -->
 <div class=" container-md counter-cnt">
     <div class="page-content-cnt">
@@ -315,8 +376,10 @@
                 <!-- Planeten Container -->
             <div class="container news-section-startpage-cnt">
                 <!-- Mit WP_Query kann ich bestimmte Daten abfragen -->
-                <?php $newestPosts = new WP_Query(array( 'posts_per_page' => 3, 'post_type' =>
-            'planet' )); while ($newestPosts->have_posts()) { $newestPosts->the_post(); ?>
+                <?php $newestPosts = new WP_Query(array( 
+                    'posts_per_page' => 6, 
+                    'post_type' => 'planet' )); 
+                while ($newestPosts->have_posts()) { $newestPosts->the_post(); ?>
                 <div class="col-sm-4">
                     <div class="flx-circle-post">
                         <a href="<?php the_permalink()?>">

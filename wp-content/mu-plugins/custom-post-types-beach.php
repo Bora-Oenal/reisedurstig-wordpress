@@ -2,7 +2,14 @@
 
 // Create Custom Post Type "Strände"
 function create_custom_post_type_strand(){
-  register_post_type('strand' , array (
+  register_post_type('strand' , array(
+    /* Wenn ein neues Custom Post registriert wurde, muss man 'has_archive'
+    integrieren, damit WP weis, das dieser custom post type auch einen Archive unterstützt*/
+    'has_archive' => true,  
+     // Stelle folgende features im Backend im Custom-Post-Type zur Verfügung die default verfügbar sind" , editor und excerpt"
+     'supports' => array('title' , 'editor' , 'excerpt' , 'thumbnail'),
+    // wenn man in der plural statt "Stadt" Plural möchte, brauche ich nicht, auskommentiert
+    // 'rewrite' => array('slug' => 'staedte'),
       'public' => true,
       'labels' => array(
           'name' => 'Strände',
