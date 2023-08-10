@@ -384,8 +384,14 @@
         </div>
     </div>
     <div class="container container-btn">
-        <a class="btn btn-posts btn-lg" href="<?php echo site_url('/planets');?>" role="button">Alle Planeten
-            &raquo</a>
+        <a class="btn btn-posts btn-lg" href="<?php echo site_url('/strand');?>" role="button">
+        <?php
+            // Hole den benutzerdefinierten Beitragstyp "Insel"
+            $strand_post_type = get_post_type_object('strand');
+            // Zeige den Namen des benutzerdefinierten Beitragstyps "Insel" an
+            echo 'Alle ' . $strand_post_type->labels->name;
+            ?>
+        &raquo</a>
     </div>
 </div>
 
