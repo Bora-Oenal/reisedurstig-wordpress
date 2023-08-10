@@ -54,7 +54,7 @@
                             class="align-self-center text-center text-light col-md-8 offset-md-2">
                             <div class="lc-block mb-4">
                                 <div editable="rich">
-                                    <h1 class="display-1 hero-hdl">Special: Planeten</h1>
+                                    <h1 class="display-1 hero-hdl"><?php post_type_archive_title();?></h1>
                                     <p class="hdl-subliner">Die faszinierende Vielfalt unseres Sonnensystems</p>
                                 </div>
                             </div>

@@ -444,6 +444,7 @@ function custom_theme_customizer( $wp_customize ) {
       'about' => 'About Page',
       'archive_stadt' => 'Archive Stadt Page',
       'archive_land' => 'Archive Land Page',
+      'archive_insel' => 'Archive Insel Page',
       'archive_planet' => 'Archive Planet Page',
       'archive' => 'News (Blog) Page',
       'blog_post' => 'Blog Post Pages',

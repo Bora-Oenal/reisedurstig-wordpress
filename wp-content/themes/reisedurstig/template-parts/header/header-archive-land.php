@@ -1,4 +1,4 @@
-<!DOCTYPE html>waterfall-beautiful.mp4
+<!DOCTYPE html>
 <!-- wp chose the language you have in wp-settings -->
 <html <?php language_attributes();?>>
 

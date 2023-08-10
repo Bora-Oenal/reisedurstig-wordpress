@@ -1,4 +1,4 @@
-<?php get_template_part('template-parts/header/header-archive-stadt'); ?>
+<?php get_template_part('template-parts/header/header-archive-insel'); ?>
 
 <!-- Page Container -->
 <div class="container container--narrow page-section city-section-cnt">
