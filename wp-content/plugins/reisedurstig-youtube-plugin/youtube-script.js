@@ -1,7 +1,7 @@
 // YouTube API-Schlüssel
-const API_KEY = 'AIzaSyCKPIR5f_UP6lG-PxRba81nFe8z4wkJ6QA';
+// const API_KEY = 'API_KEY';
 // YouTube Kanal-ID
-const CHANNEL_ID = 'UCtpKNaYEVALJr_iT1l5xzVw';
+const CHANNEL_ID = 'CHANNEL_ID';
 // Anzahl der anzuzeigenden Videos
 const MAX_RESULTS = 4;
 
