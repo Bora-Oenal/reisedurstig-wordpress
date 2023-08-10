@@ -1,5 +1,5 @@
 // YouTube API-Schlüssel
-// const API_KEY = 'API_KEY';
+const API_KEY = 'API_KEY';
 // YouTube Kanal-ID
 const CHANNEL_ID = 'CHANNEL_ID';
 // Anzahl der anzuzeigenden Videos
