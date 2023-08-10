@@ -3,7 +3,13 @@
 
 <!-- Inseln-Section -->
 <div class="container rd-city-section">
-    <h2 class="page-h2">Inseln Section (Custom Post types)</h2>
+    <!-- Custom-Post-Type-Title -->
+    <?php
+    // Hole den benutzerdefinierten Beitragstyp "Insel"
+    $insel_post_type = get_post_type_object('insel');
+    // Zeige den Namen des benutzerdefinierten Beitragstyps "Insel" an
+    echo '<h2 class="page-h2">' . $insel_post_type->labels->name . ' (Custom-Post-Type)</h2>';
+    ?>
     <p class="intro-txt">Sorted Random</p>
 </div>
 <!-- Inseln Container -->
@@ -59,7 +65,7 @@
     <!-- Big Video Section -->
     <h2 class="page-h2">Meine Videos auf reisedurstig - youtube Channel</h2>
 
-    <!-- Dynamic You Tube Section (Own Plugin) -->
+    <!-- Dynamic You Tube Section (for Own Plugin) This Code implement the section on page -->
     <div class="container-md video-cnt mx-width">
         <div class="container-md youtube-video-rows">
             <section id="youtube-section">
@@ -135,7 +141,12 @@
 
 <!-- Länder-Section -->
 <div class="container rd-city-section">
-    <h2 class="page-h2">Länder Section Custom Post types</h2>
+    <<?php
+        // Hole den benutzerdefinierten Beitragstyp "Land"
+        $land_post_type = get_post_type_object('land');
+        // Zeige den Namen des benutzerdefinierten Beitragstyps "Land" an
+        echo '<h2 class="page-h2">' . $land_post_type->labels->name . ' (Custom-Post-Type)</h2>';
+        ?>
     <p class="intro-txt">Sorted ASC by Random</p>
 </div>
 <!-- Länder Container -->
@@ -188,7 +199,13 @@
 
 <!-- Städte-Section -->
 <div class="container rd-city-section">
-    <h2 class="page-h2">Städte Section Custom Post types</h2>
+    <!-- Custom-Post-Type-Title -->
+    <?php
+    // Hole den benutzerdefinierten Beitragstyp "Stadt"
+    $stadt_post_type = get_post_type_object('stadt');
+    // Zeige den Namen des benutzerdefinierten Beitragstyps "Stadt" an
+    echo '<h2 class="page-h2">' . $stadt_post_type->labels->name . ' (Custom-Post-Type)</h2>';
+    ?>
     <p class="intro-txt">Sorted ASC by Travel-Date</p>
 </div>
 <!-- Städte Container -->
@@ -254,7 +271,7 @@
 
 <!-- GoogleMAps-Section -->
 <div class=" container-md google-maps-cnt">
-    <h2 class="page-h2" ">Where I have Been</h2>
+    <h2 class="page-h2">Where I have Been</h2>
     <div class=" ratio ratio-16x9">
             <!-- <iframe
                 src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=medellin%20castilla+(My%20Business%20Name)&amp;t=&amp;z=5&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
@@ -305,11 +322,16 @@
 </section>
 </div>
 
-
 <!-- Strände Section -->
 <div class=" container-md counter-cnt">
     <div class="page-content-cnt">
-        <h2 class="page-h2">Special Section Strände (Custom Post Type)</h2>
+        <!-- Custom-Post-Type-Title -->
+        <?php
+        // Hole den benutzerdefinierten Beitragstyp "Strand"
+        $strand_post_type = get_post_type_object('strand');
+        // Zeige den Namen des benutzerdefinierten Beitragstyps "Strand" an
+        echo '<h2 class="page-h2">' . $strand_post_type->labels->name . ' (Custom-Post-Type)</h2>';
+        ?>
         <div class="container">
             <p class="lead cta-flex">
                 <!-- Strände Container -->
@@ -317,7 +339,7 @@
                 <!-- Mit WP_Query kann ich bestimmte Daten abfragen -->
                 <?php 
                 $allBeaches = new WP_Query(array( 
-                    'posts_per_page' => 6, 
+                    'posts_per_page' => 3, 
                     'post_type' => 'strand' )); 
                 while (
                  $allBeaches->have_posts()) { 
@@ -370,7 +392,13 @@
 <!-- Planet Section -->
 <div class=" container-md counter-cnt">
     <div class="page-content-cnt">
-        <h2 class="page-h2">Special Section Planeten (Custom Post Type)</h2>
+        <!-- Custom-Post-Type-Title -->
+        <?php
+        // Hole den benutzerdefinierten Beitragstyp "Planet"
+        $planet_post_type = get_post_type_object('planet');
+        // Zeige den Namen des benutzerdefinierten Beitragstyps "Planet" an
+        echo '<h2 class="page-h2">' . $planet_post_type->labels->name . ' (Custom-Post-Type)</h2>';
+        ?>
         <div class="container">
             <p class="lead cta-flex">
                 <!-- Planeten Container -->
