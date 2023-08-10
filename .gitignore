@@ -7,4 +7,6 @@ wp-content/.DS_Store
 wp-content/wpvividbackups/wpvivid_log/wpvivid-64d2b812e04ce_backup_log.txt
 wp-content/languages/plugins/wpvivid-backuprestore-de_DE.po
 wp-content/languages/plugins/wpvivid-backuprestore-de_DE.mo
-/Applications/MAMP/htdocs/reisedurstig/wp-content/plugins
+wp-content/plugins
+wp-content/uploads/2023/08/all-in-one-wp-migration-100GB.zip
+wp-content/uploads/2023/08/all-in-one-wp-migration-100GB-1.zip
