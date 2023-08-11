@@ -1,5 +1,14 @@
 <?php get_template_part('template-parts/header/header'); ?>
 
+<!-- Instagram-Shortcode from plugin -->
+<div class="page-content-cnt">
+    
+    <h2 class="page-h2">Reisedurstig.de @ Instagram</h2>
+    <div class="container">
+        <?php the_content(); ?>
+    </div>
+</div>
+
 
 <!-- Inseln-Section -->
 <div class="container rd-city-section">
