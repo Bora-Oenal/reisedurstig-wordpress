@@ -1,4 +1,55 @@
+<!-- Header -->
 <?php get_template_part('template-parts/header/header'); ?>
+
+<!-- News-Section -->
+<div class=" container-md counter-cnt insta-cnt">
+    <!-- Custom-Post-Type-Title -->
+    <h2 class="page-h2">Letzten News</h2>
+    <p class="intro-txt">Sorted Random</p>
+</div>
+<!-- News Container -->
+<div class="container city-section-cnt">
+    <?php 
+    $allPosts = new WP_Query(array( 
+        'posts_per_page'=> 3, 
+        'post_type' => 'post',
+        'orderby' => 'rand'
+        )); 
+    while ($allPosts->have_posts()) {
+        $allPosts->the_post(); ?>
+    <div class="col-sm-4 city-box">
+        <div class="flx-circle-post">
+            <a href="<?php the_permalink()?>"></a>
+            <div class="col-sm-12 card card-rd">
+                <a href="<?php the_permalink();?>" class="thumb-a">
+                    <?php the_post_thumbnail('cityBoxImagesThumbnails', array('class' =>
+                'card-img-top', 'alt' => '...')); ?>
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title news-section"">
+                        <a href="<?php the_permalink(); ?>">
+                            <?php echo wp_trim_words(get_the_title(), 7); ?>
+                        </a>
+                    </h5>
+                    <p class="card-text"><?php echo wp_trim_words(get_the_content(), 10 ); ?></p>
+                    <a href="<?php the_permalink()?>" class="btn btn-posts btn-startpage">Mehr erfahren
+                        &raquo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php
+        }
+        wp_reset_postdata();
+        ?>
+</div>
+<!-- Alle News Button -->
+<div class="container">
+    <p class="lead cta-flex city-sec">
+        <a class="btn btn-posts btn-lg btn-start-city" href="<?php echo get_post_type_archive_link( 'insel' )?>"
+            role="button">Alle Inseln &raquo</a>
+    </p>
+</div>
 
 
 <!-- Inseln-Section -->
@@ -50,7 +101,6 @@
         wp_reset_postdata();
         ?>
 </div>
-<!-- Ende Inseln Container -->
 <!-- Alle Inseln Button -->
 <div class="container">
     <p class="lead cta-flex city-sec">
@@ -58,7 +108,6 @@
             role="button">Alle Inseln &raquo</a>
     </p>
 </div>
-
 
 <!-- You Tube Section -->
 <div class="page-content-cnt">
@@ -137,7 +186,6 @@
         </p>
     </div>
 </div>
-
 
 <!-- Länder-Section -->
 <div class="container rd-city-section">
@@ -468,7 +516,6 @@
 
 <!-- Instagram-Shortcode from plugin -->
 <div class=" container-md counter-cnt insta-cnt">
-    
     <h2 class="page-h2">Reisedurstig.de @ Instagram</h2>
     <div class="container">
         <?php the_content(); ?>

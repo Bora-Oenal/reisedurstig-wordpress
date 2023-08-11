@@ -1238,6 +1238,7 @@ button.DesignedButton__button.LoadMoreButton {
 }
 
 /* Strand Section Startpage */
-h5.card-title.beach-section {
+h5.card-title.beach-section,
+h5.card-title.news-section {
     margin-bottom: 12px;
 }
