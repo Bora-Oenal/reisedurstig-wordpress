@@ -31,8 +31,12 @@
                             <?php echo wp_trim_words(get_the_title(), 7); ?>
                         </a>
                     </h5>
-                    <p class="card-text"><?php echo wp_trim_words(get_the_content(), 10 ); ?></p>
-                    <a href="<?php the_permalink()?>" class="btn btn-posts btn-startpage">Mehr erfahren
+                    <p class="card-text">
+                        <?php echo wp_trim_words(get_the_content(), 10 );
+                         ?>
+                    </p>
+                    <a href="<?php the_permalink()?>"
+                         class="btn btn-posts btn-startpage">Mehr erfahren
                         &raquo</a>
                 </div>
             </div>
@@ -41,13 +45,13 @@
     <?php
         }
         wp_reset_postdata();
-        ?>
+    ?>
 </div>
 <!-- Alle News Button -->
 <div class="container">
     <p class="lead cta-flex city-sec">
-        <a class="btn btn-posts btn-lg btn-start-city" href="<?php echo get_post_type_archive_link( 'insel' )?>"
-            role="button">Alle Inseln &raquo</a>
+        <a class="btn btn-posts btn-lg btn-start-city" href="<?php echo get_post_type_archive_link( 'post' )?>"
+            role="button">Alle Beiträge &raquo</a>
     </p>
 </div>
 
@@ -477,21 +481,22 @@
                             <?php the_post_thumbnail('cityBoxImagesThumbnails', array('class' =>
                             'card-img-top', 'alt' => '...')); ?>
                             <div class="card-body">
-                                <h5 class="card-title">
+                                <h5 class="card-title news-section">
                                     <a href="<?php the_permalink(); ?>">
                                         <?php the_title() ?>
                                     </a>
                                 </h5>
-                                Hier erfolgt eine Abfrage excerpt vs content
+                                <!-- Hier erfolgt eine Abfrage excerpt vs content -->
                                 <p>
                                     <!-- Abfrage-> wenn excerpt zeige an, sonst zeige the_content -->
                                     <?php 
-                                        echo wp_trim_words(get_the_content(), 7);
+                                        echo wp_trim_words(get_the_content(), 11);
                                     ?>
                                 </p>
-                                <hr>
-                                Loop from Content:
-                                <p class="card-text"><?php echo wp_trim_words(get_the_content(), 10 ); ?></p>
+                                <!-- <hr> -->
+                                <!-- Vorheriger Code folgt darunter -->
+                                <!-- Loop from Content:
+                                <p class="card-text"><?php echo wp_trim_words(get_the_content(), 10 ); ?></p> -->
                                 <!-- Loop from Excerpt:
                                 <p class="excerpt-p">
                                     <?php the_excerpt( );?>
