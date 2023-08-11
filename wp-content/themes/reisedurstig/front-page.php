@@ -1,14 +1,5 @@
 <?php get_template_part('template-parts/header/header'); ?>
 
-<!-- Instagram-Shortcode from plugin -->
-<div class="page-content-cnt">
-    
-    <h2 class="page-h2">Reisedurstig.de @ Instagram</h2>
-    <div class="container">
-        <?php the_content(); ?>
-    </div>
-</div>
-
 
 <!-- Inseln-Section -->
 <div class="container rd-city-section">
@@ -205,7 +196,6 @@
     </p>
 </div>
 
-
 <!-- Städte-Section -->
 <div class="container rd-city-section">
     <!-- Custom-Post-Type-Title -->
@@ -277,7 +267,6 @@
     </p>
 </div>
 
-
 <!-- GoogleMAps-Section -->
 <div class=" container-md google-maps-cnt">
     <h2 class="page-h2">Where I have Been</h2>
@@ -297,38 +286,38 @@
 <!-- Counter-Section -->
 <div class=" container-md counter-cnt">
     <h2 class="page-h2">Reisedurstig in Zahlen</h2>
-<!-- Counter -->
-<section class=" wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">
-        <div class="container">
-            <div class="row counter-row">
-                <!-- counter -->
-                <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten animated counter-box"
-                    data-wow-duration="300ms"
-                    style="visibility: visible; animation-duration: 300ms; animation-name: fadeInUp;">
-                    <span id="anim-number-pizza" class="counter-number"></span>
-                    <span class="timer counter alt-font appear" data-to="980" data-speed="7000">5</span>
-                    <p class="counter-title">Kontinente</p>
+    <!-- Counter -->
+    <section class=" wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">
+            <div class="container">
+                <div class="row counter-row">
+                    <!-- counter -->
+                    <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten animated counter-box"
+                        data-wow-duration="300ms"
+                        style="visibility: visible; animation-duration: 300ms; animation-name: fadeInUp;">
+                        <span id="anim-number-pizza" class="counter-number"></span>
+                        <span class="timer counter alt-font appear" data-to="980" data-speed="7000">5</span>
+                        <p class="counter-title">Kontinente</p>
+                    </div>
+                    <!-- end counter -->
+                    <!-- counter -->
+                    <div class="col-md-3 col-sm-6 bottom-margin-small text-center counter-section wow fadeInUp xs-margin-bottom-ten animated counter-box"
+                        data-wow-duration="900ms"
+                        style="visibility: visible; animation-duration: 900ms; animation-name: fadeInUp;">
+                        <span class="timer counter alt-font appear" data-to="810" data-speed="7000">28</span>
+                        <span class="counter-title">Länder besucht</span>
+                    </div>
+                    <!-- end counter -->
+                    <!-- counter -->
+                    <div class="col-md-3 col-sm-6 text-center counter-section wow fadeInUp animated counter-box"
+                        data-wow-duration="1200ms"
+                        style="visibility: visible; animation-duration: 1200ms; animation-name: fadeInUp;">
+                        <span class="timer counter alt-font appear" data-to="600" data-speed="7000">167</span>
+                        <span class="counter-title">Länder noch offen</span>
+                    </div>
+                    <!-- end counter -->
                 </div>
-                <!-- end counter -->
-                <!-- counter -->
-                <div class="col-md-3 col-sm-6 bottom-margin-small text-center counter-section wow fadeInUp xs-margin-bottom-ten animated counter-box"
-                    data-wow-duration="900ms"
-                    style="visibility: visible; animation-duration: 900ms; animation-name: fadeInUp;">
-                    <span class="timer counter alt-font appear" data-to="810" data-speed="7000">28</span>
-                    <span class="counter-title">Länder besucht</span>
-                </div>
-                <!-- end counter -->
-                <!-- counter -->
-                <div class="col-md-3 col-sm-6 text-center counter-section wow fadeInUp animated counter-box"
-                    data-wow-duration="1200ms"
-                    style="visibility: visible; animation-duration: 1200ms; animation-name: fadeInUp;">
-                    <span class="timer counter alt-font appear" data-to="600" data-speed="7000">167</span>
-                    <span class="counter-title">Länder noch offen</span>
-                </div>
-                <!-- end counter -->
             </div>
-        </div>
-</section>
+    </section>
 </div>
 
 <!-- Strände Section -->
@@ -472,6 +461,15 @@
     <div class="container container-btn">
         <a class="btn btn-posts btn-lg" href="<?php echo site_url('/planets');?>" role="button">Alle Planeten
             &raquo</a>
+    </div>
+</div>
+
+<!-- Instagram-Shortcode from plugin -->
+<div class="page-content-cnt">
+    
+    <h2 class="page-h2">Reisedurstig.de @ Instagram</h2>
+    <div class="container">
+        <?php the_content(); ?>
     </div>
 </div>
 
