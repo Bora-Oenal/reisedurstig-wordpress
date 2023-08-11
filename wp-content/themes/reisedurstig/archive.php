@@ -2,7 +2,7 @@
 
 <!-- Page Container -->
 <div class="container container--narrow page-section">
-    <h2 class="page-h2" ">HEADER ARCHIVE-ARCHIVE.php</h2>
+    <h2 class="page-h2">Aktuelle Nachrichten</h2>
     <!-- Big Video Section -->
     <div class=" container-md video-cnt mx-width flx">
         
