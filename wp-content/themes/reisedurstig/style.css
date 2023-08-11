@@ -1218,3 +1218,21 @@ h2.h1.h1-style.blog-title {
 a.btn.btn-posts.btn-startpage.news-box {
     bottom: 10px;
 }
+
+/* Insta-Feed-Section */
+.container-md.counter-cnt.insta-cnt {
+    max-width: 1125px;
+}
+.FeedHeader__bio.FeedHeader__subtext.FeedHeader__info-row span {
+    font-size: 16px;
+    line-height: 22px;
+}
+button.DesignedButton__button.FollowButton {
+    font-weight: 600!important;;
+    font-size: 16px!important;;
+}
+button.DesignedButton__button.LoadMoreButton {
+    font-weight: 600!important;
+    font-size: 16px!important;
+    margin-top: 40px!important;
+}

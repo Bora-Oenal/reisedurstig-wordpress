@@ -465,7 +465,7 @@
 </div>
 
 <!-- Instagram-Shortcode from plugin -->
-<div class="page-content-cnt">
+<div class=" container-md counter-cnt insta-cnt">
     
     <h2 class="page-h2">Reisedurstig.de @ Instagram</h2>
     <div class="container">
