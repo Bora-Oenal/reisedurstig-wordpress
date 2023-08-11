@@ -348,27 +348,29 @@
                             <?php the_post_thumbnail('cityBoxImagesThumbnails', array('class' =>
                             'card-img-top', 'alt' => '...')); ?>
                             <div class="card-body">
-                                <h5 class="card-title">
+                                <h5 class="card-title beach-section">
                                     <a href="<?php the_permalink(); ?>">
                                         <?php the_title() ?>
                                     </a>
                                 </h5>
-                                Hier erfolgt eine Abfrage excerpt vs content
+                                <!-- Darunter folgt eine Abfrage excerpt vs content -->
                                 <p>
-                            <!-- Abfrage-> wenn excerpt zeige an, sonst zeige the_content -->
-                            <?php if (has_excerpt()) {
-                                echo get_the_excerpt();
-                            } else {
-                                wp_trim_words(get_the_content(), 7);
-                            } ?>
+                                <!-- Abfrage-> wenn excerpt zeige an, sonst zeige the_content -->
+                                    <?php if (has_excerpt()) {
+                                        echo wp_trim_words(get_the_content(), 17);
+                                    } else {
+                                        wp_trim_words(get_the_excerpt(), 17);
+                                    } ?>
                                 </p>
-                                <hr>
-                                Loop from Content:
-                                <p class="card-text"><?php echo wp_trim_words(get_the_content(), 10 ); ?></p>
-                                Loop from Excerpt:
+                                <!-- <hr> -->
+                                <!-- Loop from Content , vorher zum testen genutzt:
+                                <p class="card-text">
+                                    <?php echo wp_trim_words(get_the_content(), 10 ); ?>
+                                </p> -->
+                                <!-- Loop from Excerpt:
                                 <p class="excerpt-p">
                                     <?php the_excerpt( );?>
-                                </p>
+                                </p> -->
                                 <a href="<?php the_permalink()?>" class="btn btn-posts btn-startpage">Mehr Erfahren &raquo</a>
                             </div>
                         </div>

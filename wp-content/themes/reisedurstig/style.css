@@ -1236,3 +1236,8 @@ button.DesignedButton__button.LoadMoreButton {
     font-size: 16px!important;
     margin-top: 40px!important;
 }
+
+/* Strand Section Startpage */
+h5.card-title.beach-section {
+    margin-bottom: 12px;
+}
