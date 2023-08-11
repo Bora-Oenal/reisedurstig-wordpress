@@ -461,7 +461,9 @@
                 <?php $newestPosts = new WP_Query(array( 
                     'posts_per_page' => 6, 
                     'post_type' => 'planet' )); 
-                while ($newestPosts->have_posts()) { $newestPosts->the_post(); ?>
+                    while ($newestPosts->have_posts()) { 
+                    $newestPosts->the_post(); 
+                ?>
                 <div class="col-sm-4">
                     <div class="flx-circle-post">
                         <a href="<?php the_permalink()?>">
@@ -483,19 +485,17 @@
                                 Hier erfolgt eine Abfrage excerpt vs content
                                 <p>
                                     <!-- Abfrage-> wenn excerpt zeige an, sonst zeige the_content -->
-                                    <?php if (has_excerpt()) {
-                                echo get_the_excerpt();
-                            } else {
-                                wp_trim_words(get_the_content(), 7);
-                            } ?>
+                                    <?php 
+                                        echo wp_trim_words(get_the_content(), 7);
+                                    ?>
                                 </p>
                                 <hr>
                                 Loop from Content:
                                 <p class="card-text"><?php echo wp_trim_words(get_the_content(), 10 ); ?></p>
-                                Loop from Excerpt:
+                                <!-- Loop from Excerpt:
                                 <p class="excerpt-p">
                                     <?php the_excerpt( );?>
-                                </p>
+                                </p> -->
                                 <a href="<?php the_permalink()?>" class="btn btn-posts btn-startpage">Mehr Erfahren &raquo</a>
                             </div>
                         </div>
