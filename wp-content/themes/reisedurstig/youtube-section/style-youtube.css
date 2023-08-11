@@ -1,0 +1,34 @@
+/* Stil für das Raster-Layout */
+#video-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Stil für die Video-Karten */
+.video-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 10px;
+}
+
+/* Stil für das erste Video in der ersten Reihe */
+.video-card.large {
+    flex: 0 0 calc(100% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.a-img {
+    width: 100%;
+    text-align: center;
+}
+.video-card.small .a-img img{
+    width: 100%;
+    text-align: center;
+}
+.video-card.large a img {
+    width: 100%;
+    padding: 0 10px;
+}
