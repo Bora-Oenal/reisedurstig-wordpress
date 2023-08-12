@@ -2,11 +2,11 @@
 
 <!-- Page Container -->
 <div class="container container--narrow page-section">
-    <h2 class="page-h2">Aktuelle Nachrichten</h2>
+    <!-- For example, when you click on a category or tag, WordPress will use the archive.php  -->
+    Otherwisthe index.phpe for blog arcive WordPress loads 
+    <h2 class="page-h2">Archive.php (wird geladen wenn Taxomonien im Ensatz sind </h2>
     <!-- Big Video Section -->
     <div class=" container-md video-cnt mx-width flx">
-        
-    
 
     <!-- Ab hier loopen wir immer mit while -->
     <?php 
