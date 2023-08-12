@@ -15,7 +15,6 @@ function rd_load_all_css(){
 //when we want run this function
 add_action('wp_enqueue_scripts','rd_load_all_css');
 
-
 /*
 * Registriere und Lade die JS-Dateien */
 function rd_load_all_js(){
@@ -28,7 +27,6 @@ function rd_load_all_js(){
 }
 //when we want run this function
 add_action('wp_enqueue_scripts', 'rd_load_all_js');
-
 
 // Load Title Dynamically in the title-tag, but in the header-section, of each page
 // Make them available to edit them at Backend 
@@ -56,15 +54,12 @@ function rd_load_page_titles() {
 //when we want run this function
 add_action('after_setup_theme','rd_load_page_titles');
 
-
 // Aktiviere den Classic Editor für Beiträge
 function enable_classic_editor() {
   add_filter('use_block_editor_for_post', '__return_false', 10);
 }
 //when we want run this function
 add_action('init', 'enable_classic_editor');
-
-
 
 // The following function adds a class attribute to all <a> tags in a particular menu location ('topMenu').
 // Necessary to give all elements a special classname (for those elements after li -> here a-tag)
@@ -78,7 +73,6 @@ function add_specific_menu_location_atts( $atts, $item, $args ) {
 }
 //when we want run this function
 add_filter( 'nav_menu_link_attributes', 'add_specific_menu_location_atts', 10, 3 );
-
 
 
 // We have learned how to create queries and manipulate what to display
@@ -107,11 +101,14 @@ function stadt_query_modifications($query){
 //when we want run this function
 add_action('pre_get_posts' , 'stadt_query_modifications');
 
-// Funktion zum Rendern der Theme-Einstellungsseite
+
+// THEME-SETTING in "Design", only for Footer for practise
+
+// Funktion zum Rendern und Anpassung der Theme-Einstellungsseite
 function mytheme_render_theme_settings_page() {
 	?>
 	<div class="wrap">
-		<h1>Theme Settings</h1>
+		<h1>Theme Settings - Einstellungsseite für reisedurstig theme</h1>
 		<form method="post" action="options.php">
 			<?php settings_fields('theme-settings-group'); ?>
 			<?php do_settings_sections('theme-settings'); ?>
@@ -120,6 +117,102 @@ function mytheme_render_theme_settings_page() {
 	</div>
 	<?php
 }
+// Funktion zum Rendern des Logo-Bildfeldes im Footer
+function mytheme_render_logo_field() {
+  $logo_image = esc_attr(get_option('logo_image'));
+  $logo_image_url = wp_get_attachment_url($logo_image); // Logo-Bild-URL aus der Anhangs-ID abrufen
+  ?>
+  <input type="hidden" name="logo_image" id="logo_image" value="<?php echo $logo_image; ?>" />
+  <img src="<?php echo $logo_image_url; ?>" style="max-width: 200px; height: auto;" id="logo_image_preview" />
+  <input type="button" class="button button-secondary" value="Choose Image" id="logo_image_button" />
+  <input type="button" class="button button-secondary" value="Remove Image" id="logo_image_remove_button" />
+  <script>
+      jQuery(document).ready(function($) {
+          // Bildauswahl öffnen
+          $('#logo_image_button').click(function() {
+              var customUploader = wp.media({
+                  title: 'Select or Upload Image',
+                  button: {
+                      text: 'Use this Image'
+                  },
+                  multiple: false
+              });
+
+              customUploader.on('select', function() {
+                  var attachment = customUploader.state().get('selection').first().toJSON();
+                  $('#logo_image').val(attachment.id);
+                  $('#logo_image_preview').attr('src', attachment.url);
+              });
+
+              customUploader.open();
+          });
+
+          // Bildentfernung
+          $('#logo_image_remove_button').click(function() {
+              $('#logo_image').val('');
+              $('#logo_image_preview').attr('src', '');
+          });
+      });
+  </script>
+  <?php
+}
+// Funktion zum Rendern des Headline Footer-Left
+function mytheme_render_headline_footer_left_field() {
+	$headline_footer_left = esc_attr(get_option('headline_footer_left'));
+	echo '<input type="text" name="headline_footer_left">' . $headline_footer_left . '';
+}
+// Funktion zum Anzeigen des Headline Footer-Left
+function mytheme_display_headline_footer_left() {
+    $headline_footer_left = esc_attr(get_option('headline_footer_left'));
+    // Zeige den Adresswert als Inhalt eines <p>-Tags an
+    echo '<p>' . nl2br($headline_footer_left) . '</p>';
+}
+// Funktion zum Rendern Textfeld im Footer Left
+function mytheme_render_text_footer_left_field() {
+  $text_footer_left = esc_attr(get_option('text_footer_left'));
+  echo '<textarea name="text_footer_left">' . $text_footer_left . '</textarea>';
+}
+// Funktion zum Anzeigen Textfeld im Footer Left
+function mytheme_display_text_footer_left() {
+  $text_footer_left = esc_attr(get_option('text_footer_left'));
+  // Zeige den Faxnummernwert als Inhalt eines <p>-Tags an
+  echo '<p>' . $text_footer_left . '</p>';
+}
+// Funktion zum Rendern des aktuellen Standorts Footer Mitte
+function mytheme_render_location_field() {
+	$location = esc_attr(get_option('location'));
+	echo '<input type="text" name="location">' . $location . '';
+}
+// Funktion zum Rendern des aktuellen Standorts Footer Mitte
+function mytheme_display_location() {
+    $location = esc_attr(get_option('location'));
+    // Zeige den Adresswert als Inhalt eines <p>-Tags an
+    echo '<p>' . nl2br($location) . '</p>';
+}
+// Funktion zum Rendern des E-Mail-Adresse Footer Mitte
+function mytheme_render_email_field() {
+	$email = esc_attr(get_option('email'));
+	echo '<input type="text" name="email">' . $email . '';
+}
+// Funktion zum Rendern der E-Mail-Adresse Footer Mitte
+function mytheme_display_email() {
+    $email = esc_attr(get_option('email'));
+    // Zeige den Adresswert als Inhalt eines <p>-Tags an
+    echo '<p>' . nl2br($email) . '</p>';
+}
+// Funktion zum Rendern der Telefonnummer-Feldes
+function mytheme_render_phone_number_field() {
+	$phone_number = esc_attr(get_option('phone_number'));
+	echo '<input type="text" name="phone_number" value="' . $phone_number . '" />';
+}
+// Funktion zum Anzeigen der Telefonnummer
+function mytheme_display_phone_number() {
+    $phone_number = esc_attr(get_option('phone_number'));
+
+    // Zeige den Telefonnummernwert als Inhalt eines <p>-Tags an
+    echo '<p>' . $phone_number . '</p>';
+}
+
 
 // Funktion zum Registrieren der Theme-Einstellungsseite
 function mytheme_register_theme_settings_page() {
@@ -138,7 +231,7 @@ function mytheme_register_theme_settings_page() {
 		'',
 		'theme-settings'
 	);
-
+  // Feld für Footer Logo
 	add_settings_field(
 		'logo_image',
 		'Logo Image',
@@ -146,35 +239,44 @@ function mytheme_register_theme_settings_page() {
 		'theme-settings',
 		'ct_custom_theme_settings_section'
 	);
+  // Feld für Headline Footer Links
+	add_settings_field(
+		'headline_footer_left',
+		'Headline Footer Left',
+		'mytheme_render_headline_footer_left_field',
+		'theme-settings',
+		'ct_custom_theme_settings_section'
+	);
+  // Feld für TextFeld Footer Links
+	add_settings_field(
+		'text_footer_left',
+		'Text Footer Left',
+		'mytheme_render_text_footer_left_field',
+		'theme-settings',
+		'ct_custom_theme_settings_section'
+	);
+  // Feld für Current Location Footer Mitte
+	add_settings_field(
+		'current_location',
+		'Current Location',
+		'mytheme_render_location_field',
+		'theme-settings',
+		'ct_custom_theme_settings_section'
+	);
 
+  // Feld für E-Mail field Footer Mitte
+	add_settings_field(
+		'email',
+		'E-Mail',
+		'mytheme_render_email_field',
+		'theme-settings',
+		'ct_custom_theme_settings_section'
+	);
+  // Feld für Telefon Field Footer Mitte
 	add_settings_field(
 		'phone_number',
-		'Phone Number',
+		'Telefon Nummer',
 		'mytheme_render_phone_number_field',
-		'theme-settings',
-		'ct_custom_theme_settings_section'
-	);
-
-	add_settings_field(
-		'address',
-		'Address Information',
-		'mytheme_render_address_field',
-		'theme-settings',
-		'ct_custom_theme_settings_section'
-	);
-
-	add_settings_field(
-		'fax_number',
-		'Fax Number',
-		'mytheme_render_fax_number_field',
-		'theme-settings',
-		'ct_custom_theme_settings_section'
-	);
-
-	add_settings_field(
-		'social_media_links',
-		'Social Media Links',
-		'mytheme_render_social_media_links_field',
 		'theme-settings',
 		'ct_custom_theme_settings_section'
 	);
@@ -192,21 +294,25 @@ function mytheme_register_theme_settings_page() {
 
 	register_setting(
 		'theme-settings-group',
-		'address'
+		'headline_footer_left'
 	);
 
 	register_setting(
 		'theme-settings-group',
-		'fax_number'
+		'text_footer_left'
 	);
 
 	register_setting(
 		'theme-settings-group',
-		'social_media_links'
+		'location'
+	);
+
+	register_setting(
+		'theme-settings-group',
+		'email'
 	);
 }
-
-// Registriere die Theme-Einstellungsseite
+// Run it
 add_action('admin_menu', 'mytheme_register_theme_settings_page');
 
 
