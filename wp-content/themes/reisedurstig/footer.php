@@ -69,20 +69,20 @@
                 <div class="footer-col col-sm col-md-4 col-lg-4 col-xl-5 mx-auto mb-md-0 mb-4">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                    <p class="footer-text-p">
-                        <i class="fas fa-home me-3"></i>
+                    <p class="footer-text-p footer-icons">
+                        <i class="fa fa-home me-3"></i>
                         New York, NY 10012, US
                     </p>
-                    <p>
-                        <i class="fas fa-envelope me-3"></i>
+                    <p class="footer-text-p footer-icons">
+                        <i class="fa fa-envelope me-3"></i>
                         info@example.com
                     </p>
-                    <p class="footer-text-p">
-                        <i class="fas fa-phone me-3"></i>
+                    <p class="footer-text-p footer-icons">
+                        <i class="fa fa-phone me-3"></i>
                         + 01 234 567 88
                     </p>
-                    <p class="footer-text-p">
-                        <i class="fas fa-print me-3"></i>
+                    <p class="footer-text-p footer-icons">
+                        <i class="fa fa-print me-3"></i>
                         + 01 234 567 89
                     </p>
                 </div>
