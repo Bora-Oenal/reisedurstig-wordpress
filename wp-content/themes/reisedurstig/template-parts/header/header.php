@@ -79,7 +79,11 @@
                                     die gerenderte URL korrekt sein und nicht mehr die relative URL zeigen, die du genannt hast. -->
                                     <a class="btn btn-startpage" href="<?php echo esc_url( get_theme_mod('reisedurstig-button-link') ); ?>" target  ="_blank" role="button"><?php echo get_theme_mod( 'reisedurstig-button-text' )?></a>      
                                 </p>
-                        </div>
+                    </div>
+                    <!-- Down Arrow Icon -->
+                    <p class="footer-text-p footer-icons hero-arrow-icon startpage">
+                            <i class="fa fa-angle-double-down"></i>
+                    </p>
                 </div>
             </div>
         </div>

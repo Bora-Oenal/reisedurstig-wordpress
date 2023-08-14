@@ -169,10 +169,16 @@ p.footer-text-p.footer-icons.hero-arrow-icon {
     position: relative;
     top: 500px;
     color: #FFFFFF;
-    font-size: 50px;
+    font-size: 60px;
     font-weight:100;
     z-index:5;
     text-align:center;
+}
+p.footer-text-p.footer-icons.hero-arrow-icon.startpage {
+    top: 450px;
+}
+.footer-text-p.footer-icons.hero-arrow-icon.stadt-arrow {
+    top: 650px;
 }
 @media only screen and (max-width: 600px) {
     .navbar-collapse.collapse.in {

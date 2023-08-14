@@ -76,6 +76,10 @@
                             </div>
                         </div>
                     </div>
+                     <!-- Down Arrow Icon -->
+                     <p class="footer-text-p footer-icons hero-arrow-icon stadt-arrow">
+                            <i class="fa fa-angle-double-down"></i>
+                    </p>
                 </div>
             </div>
         </div>

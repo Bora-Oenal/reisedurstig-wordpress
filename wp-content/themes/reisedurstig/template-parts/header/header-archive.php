@@ -75,6 +75,10 @@
                                 </div>
                             </div>
                         </div>
+                         <!-- Down Arrow Icon -->
+                         <p class="footer-text-p footer-icons hero-arrow-icon">
+                                <i class="fa fa-angle-double-down"></i>
+                        </p>
                         <?php wp_reset_postdata(); ?>
                     </div>
                 </div>
