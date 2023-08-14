@@ -164,6 +164,16 @@ ul.navbar-nav.mr-auto.menu-tablet-in-row {
     display: flex;
     flex-direction: row;
 }
+p.footer-text-p.footer-icons.hero-arrow-icon {
+    width: 100%;
+    position: relative;
+    top: 500px;
+    color: #FFFFFF;
+    font-size: 50px;
+    font-weight:100;
+    z-index:5;
+    text-align:center;
+}
 @media only screen and (max-width: 600px) {
     .navbar-collapse.collapse.in {
         display: flex;

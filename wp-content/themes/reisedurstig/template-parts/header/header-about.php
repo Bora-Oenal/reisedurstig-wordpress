@@ -66,7 +66,11 @@
                                 <h1 class="display-1 hero-hdl"><?php the_title(); ?></h1>
                                 <p class="hdl-subliner excerpt-p"><?php echo get_the_excerpt(); ?></p>
                             </div>
-                        </div>
+                        </div>                        
+                        <!-- Down Arrow Icon -->
+                        <p class="footer-text-p footer-icons hero-arrow-icon">
+                            <i class="fa fa-angle-double-down"></i>
+                        </p>
                         </div>
                     </div>
                 </div>
