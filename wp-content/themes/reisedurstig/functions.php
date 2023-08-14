@@ -103,7 +103,6 @@ add_action('pre_get_posts' , 'stadt_query_modifications');
 
 
 // THEME-SETTING in "Design", only for Footer for practise
-
 // Funktion zum Rendern und Anpassung der Theme-Einstellungsseite
 function mytheme_render_theme_settings_page() {
 	?>
@@ -159,7 +158,7 @@ function mytheme_render_logo_field() {
 // Funktion zum Rendern des Headline Footer-Left
 function mytheme_render_headline_footer_left_field() {
 	$headline_footer_left = esc_attr(get_option('headline_footer_left'));
-	echo '<input type="text" name="headline_footer_left">' . $headline_footer_left . '';
+  echo '<textarea name="headline_footer_left">' . $headline_footer_left . '</textarea>';
 }
 // Funktion zum Anzeigen des Headline Footer-Left
 function mytheme_display_headline_footer_left() {
@@ -180,37 +179,37 @@ function mytheme_display_text_footer_left() {
 }
 // Funktion zum Rendern des aktuellen Standorts Footer Mitte
 function mytheme_render_location_field() {
-	$location = esc_attr(get_option('location'));
-	echo '<input type="text" name="location">' . $location . '';
+	$current_location = esc_attr(get_option('current_location'));
+	echo '<textarea name="current_location">' . $current_location . '</textarea>';
 }
 // Funktion zum Rendern des aktuellen Standorts Footer Mitte
 function mytheme_display_location() {
-    $location = esc_attr(get_option('location'));
+    $current_location = esc_attr(get_option('current_location'));
     // Zeige den Adresswert als Inhalt eines <p>-Tags an
-    echo '<p>' . nl2br($location) . '</p>';
+    echo '<p class="footer-adress-content">' . nl2br($current_location) . '</p>';
 }
 // Funktion zum Rendern des E-Mail-Adresse Footer Mitte
 function mytheme_render_email_field() {
 	$email = esc_attr(get_option('email'));
-	echo '<input type="text" name="email">' . $email . '';
+	echo '<textarea name="email">' . $email . '</textarea>';
 }
 // Funktion zum Rendern der E-Mail-Adresse Footer Mitte
 function mytheme_display_email() {
     $email = esc_attr(get_option('email'));
     // Zeige den Adresswert als Inhalt eines <p>-Tags an
-    echo '<p>' . nl2br($email) . '</p>';
+    echo '<p class="footer-adress-content">' . nl2br($email) . '</p>';
 }
 // Funktion zum Rendern der Telefonnummer-Feldes
 function mytheme_render_phone_number_field() {
 	$phone_number = esc_attr(get_option('phone_number'));
-	echo '<input type="text" name="phone_number" value="' . $phone_number . '" />';
+	echo '<textarea name="phone_number">' . $phone_number . '</textarea>';
 }
 // Funktion zum Anzeigen der Telefonnummer
 function mytheme_display_phone_number() {
     $phone_number = esc_attr(get_option('phone_number'));
 
     // Zeige den Telefonnummernwert als Inhalt eines <p>-Tags an
-    echo '<p>' . $phone_number . '</p>';
+    echo '<p class="footer-adress-content">' . $phone_number . '</p>';
 }
 
 
@@ -231,7 +230,7 @@ function mytheme_register_theme_settings_page() {
 		'',
 		'theme-settings'
 	);
-  // Feld für Footer Logo
+// Feld für Footer Logo
 	add_settings_field(
 		'logo_image',
 		'Logo Image',
@@ -239,7 +238,7 @@ function mytheme_register_theme_settings_page() {
 		'theme-settings',
 		'ct_custom_theme_settings_section'
 	);
-  // Feld für Headline Footer Links
+// Feld für Headline Footer Links
 	add_settings_field(
 		'headline_footer_left',
 		'Headline Footer Left',
@@ -247,7 +246,7 @@ function mytheme_register_theme_settings_page() {
 		'theme-settings',
 		'ct_custom_theme_settings_section'
 	);
-  // Feld für TextFeld Footer Links
+// Feld für TextFeld Footer Links
 	add_settings_field(
 		'text_footer_left',
 		'Text Footer Left',
@@ -255,7 +254,7 @@ function mytheme_register_theme_settings_page() {
 		'theme-settings',
 		'ct_custom_theme_settings_section'
 	);
-  // Feld für Current Location Footer Mitte
+// Feld für Current Location Footer Mitte
 	add_settings_field(
 		'current_location',
 		'Current Location',
@@ -264,7 +263,7 @@ function mytheme_register_theme_settings_page() {
 		'ct_custom_theme_settings_section'
 	);
 
-  // Feld für E-Mail field Footer Mitte
+// Feld für E-Mail field Footer Mitte
 	add_settings_field(
 		'email',
 		'E-Mail',
@@ -272,7 +271,7 @@ function mytheme_register_theme_settings_page() {
 		'theme-settings',
 		'ct_custom_theme_settings_section'
 	);
-  // Feld für Telefon Field Footer Mitte
+// Feld für Telefon Field Footer Mitte
 	add_settings_field(
 		'phone_number',
 		'Telefon Nummer',
@@ -281,15 +280,12 @@ function mytheme_register_theme_settings_page() {
 		'ct_custom_theme_settings_section'
 	);
 
+
+
 	// Registriere die Einstellungen
 	register_setting(
 		'theme-settings-group',
 		'logo_image'
-	);
-
-	register_setting(
-		'theme-settings-group',
-		'phone_number'
 	);
 
 	register_setting(
@@ -304,12 +300,12 @@ function mytheme_register_theme_settings_page() {
 
 	register_setting(
 		'theme-settings-group',
-		'location'
+		'current_location'
 	);
 
 	register_setting(
 		'theme-settings-group',
-		'email'
+		'phone_number'
 	);
 }
 // Run it

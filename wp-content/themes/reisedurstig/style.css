@@ -963,6 +963,22 @@ p.footer-p {
     color:#212529;
     text-decoration:none;
 }
+.footer-adress-content {
+    display: flex;
+    flex-wrap:wrap;
+    width: 60%;
+}
+p.footer-text-p.footer-icons {
+    width: 25%;
+}
+.rd-footer-cnt{
+    display: flex;
+}
+h6.text-uppercase.fw-bold.mb-4 p {
+    font-size: 1rem;
+    text-transform: uppercase !important;
+    display: -webkit-box !important;
+}
 /* Städte Page */
 .header-cnt.bg-image-city {
     height: 100vh;
