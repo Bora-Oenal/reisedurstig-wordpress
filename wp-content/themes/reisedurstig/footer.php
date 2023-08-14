@@ -49,50 +49,54 @@
 
     <!-- Section: Links  -->
     <section class="footer-lft">
-        <div class="container footer-compl text-center text-md-start mt-5">
+        <div class="container footer-compl text-center text-md-start mt-5 rd-footer-cnt">
             <!-- Grid row -->
             <div class="footer-row row mt-3">
                 <!-- Grid column -->
-                <div class="footer-col col-sm col-md-4 col-lg-4 col-xl-5 mx-auto mb-4">
+                <div class="footer-col col-sm col-md-4 col-lg-4 col-xl-5 mx-auto mb-4 ">
                     <!-- Content -->
                     <h6 class="text-uppercase fw-bold mb-4">
-                        <i class="fas fa-gem me-3"></i>Company name
+                        <!-- Anzeige der Headline -->
+                        <?php mytheme_display_headline_footer_left(); ?> 
                     </h6>
-                    <p class="footer-text-p">
-                        Here you can use rows and columns to organize your footer content. Lorem ipsum
-                        dolor sit amet, consectetur adipisicing elit.
-                    </p>
+                    <?php mytheme_display_text_footer_left(); ?> 
+                    <div class="footer-adress-content">
+                        
+                        
+                        
+                    </div>
                 </div>
                 <!-- Grid column -->
 
                 <!-- Grid column -->
                 <div class="footer-col col-sm col-md-4 col-lg-4 col-xl-5 mx-auto mb-md-0 mb-4">
                     <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                    <p class="footer-text-p footer-icons">
-                        <i class="fa fa-home me-3"></i>
-                        New York, NY 10012, US
-                    </p>
-                    <p class="footer-text-p footer-icons">
-                        <i class="fa fa-envelope me-3"></i>
-                        info@example.com
-                    </p>
-                    <p class="footer-text-p footer-icons">
-                        <i class="fa fa-phone me-3"></i>
-                        + 01 234 567 88
-                    </p>
-                    <p class="footer-text-p footer-icons">
-                        <i class="fa fa-print me-3"></i>
-                        + 01 234 567 89
-                    </p>
-                </div>
+                    <h6 class="text-uppercase fw-bold mb-4">Kontakt</h6>
+                    <div class="footer-adress-content">
+                        <!-- Anzeige der Location -->
+                        <p class="footer-text-p footer-icons">
+                            <i class="fa fa-home me-3"></i>
+                            <?php mytheme_display_location(); ?> 
+                        </p>
+                        <!-- Anzeige der E-Mail -->
+                        <p class="footer-text-p footer-icons">
+                            <i class="fa fa-envelope me-3"></i>
+                            <?php mytheme_display_email(); ?>
+                        </p>
+                        <!-- Anzeige der Tel -->
+                        <p class="footer-text-p footer-icons">
+                            <i class="fa fa-phone me-3"></i>
+                            <?php mytheme_display_phone_number(); ?> 
+                        </p>
+                    </div>
+				</div>
                 <!-- Grid column -->
 
                 <!-- Grid column -->
                 <div class="footer-col col-sm col-md-4 col-lg-4 col-xl-2 mx-auto mb-4">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">
-                        Useful links
+                        Links
                     </h6>
                     <!-- Hier eine Variante wenn man hard-codiert vorgeht -->
                     <!-- Creating dynamic menu -->
