@@ -47,7 +47,7 @@
     </section>
     <!-- Section: Social media -->
 
-    <!-- Section: Links  -->
+    <!-- Section: Contact  -->
     <section class="footer-lft">
         <div class="container footer-compl text-center text-md-start mt-5 rd-footer-cnt">
             <!-- Grid row -->
@@ -68,31 +68,8 @@
                 </div>
                 <!-- Grid column -->
 
-                <!-- Grid column -->
-                <div class="footer-col col-sm col-md-4 col-lg-4 col-xl-5 mx-auto mb-md-0 mb-4">
-                    <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">Kontakt</h6>
-                    <div class="footer-adress-content">
-                        <!-- Anzeige der Location -->
-                        <p class="footer-text-p footer-icons">
-                            <i class="fa fa-home me-3"></i>
-                            <?php mytheme_display_location(); ?> 
-                        </p>
-                        <!-- Anzeige der E-Mail -->
-                        <p class="footer-text-p footer-icons">
-                            <i class="fa fa-envelope me-3"></i>
-                            <?php mytheme_display_email(); ?>
-                        </p>
-                        <!-- Anzeige der Tel -->
-                        <p class="footer-text-p footer-icons">
-                            <i class="fa fa-phone me-3"></i>
-                            <?php mytheme_display_phone_number(); ?> 
-                        </p>
-                    </div>
-				</div>
-                <!-- Grid column -->
 
-                <!-- Grid column -->
+                <!-- Grid column LINKS-->
                 <div class="footer-col col-sm col-md-4 col-lg-4 col-xl-2 mx-auto mb-4">
                     <!-- Links -->
                     <h6 class="text-uppercase fw-bold mb-4">
@@ -133,11 +110,48 @@
                     </ul> -->
                 </div>
                 <!-- Grid column -->
+
+                <!-- Grid column KONTAKT INFOS --> 
+                <div class="footer-col col-sm col-md-4 col-lg-4 col-xl-5 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">Kontakt</h6>
+                    <div class="footer-adress-content">
+                        <!-- Anzeige der Location -->
+                        <p class="footer-text-p footer-icons">
+                            <i class="fa fa-home me-3"></i>
+                            <?php mytheme_display_location(); ?> 
+                        </p>
+                        <!-- Anzeige der E-Mail -->
+                        <p class="footer-text-p footer-icons">
+                            <i class="fa fa-envelope me-3"></i>
+                            <?php mytheme_display_email(); ?>
+                        </p>
+                        <!-- Anzeige der Tel -->
+                        <!-- <p class="footer-text-p footer-icons">
+                            <i class="fa fa-phone me-3"></i>
+                            <?php mytheme_display_phone_number(); ?> 
+                        </p> -->
+                        
+                        <!-- Logo Footer Theme-Settings auswählbar -->
+                        <?php 
+                            $logo_image_id = get_option('logo_image');
+                            if ($logo_image_id) {
+                                $logo_image_url = wp_get_attachment_url($logo_image_id);
+                                if ($logo_image_url) {
+                                    echo '<img class="logo-footer" src="' . esc_url($logo_image_url) . '" alt="Logo" />';
+                                }
+                            }
+                        ?>
+                    </div>
+				</div>
+                <!-- Grid column -->
+
             </div>
             <!-- Grid row -->
         </div>
     </section>
-    <!-- Section: Links  -->
+    <!-- Section: Contact  -->
+
     <!-- Copyright -->
     <div class="text-center p-4 footer-cnt" style="background-color: rgba(0, 0, 0, 0.05);">
         <li class="nav-item">

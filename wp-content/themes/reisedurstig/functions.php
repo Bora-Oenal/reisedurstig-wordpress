@@ -155,6 +155,14 @@ function mytheme_render_logo_field() {
   </script>
   <?php
 }
+// Nötig damit man im backend media-files nutzen kann
+function enqueue_media_scripts() {
+  if (is_admin()) {
+      wp_enqueue_media();
+  }
+}
+add_action('admin_enqueue_scripts', 'enqueue_media_scripts');
+
 // Funktion zum Rendern des Headline Footer-Left
 function mytheme_render_headline_footer_left_field() {
 	$headline_footer_left = esc_attr(get_option('headline_footer_left'));
