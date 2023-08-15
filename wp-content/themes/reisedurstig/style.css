@@ -245,6 +245,7 @@ ul.navbar-nav.mr-auto li a:hover {
     color: #FFFFFF;
     padding: 10px;
 }
+i.fa.fa-search,
 a.social-icon-settings {
     color: #FFFFFF;
     margin: 0 10px;
@@ -259,6 +260,38 @@ a.social-icon-settings {
     font-size: 18px;
     padding: 2px;
 }
+/* search-icon header */
+#search-icon {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#search-form {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+
+#search-icon i.fa.fa-search {
+    color: #FFFFFF;
+    margin: 0 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+
+.search-form
+.search-submit { 
+display:none;
+}
+
 .container.hero-cnt {
     display: flex;
     align-items: center;
