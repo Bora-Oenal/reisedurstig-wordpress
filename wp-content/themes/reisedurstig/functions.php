@@ -24,6 +24,7 @@ function rd_load_all_js(){
     // wird nicht mehr benötigt, da bereits im pluginordner erledigt
     // wp_enqueue_script('youtube-script', plugin_dir_url(__FILE__) . 'youtube-script.js', array('jquery'), null, true);
     wp_enqueue_script('custom-js' , get_template_directory_uri() . '/assets/js/script.js', array(), '1.0' , true );
+    wp_enqueue_script('search-js' , get_template_directory_uri() . '/assets/js/search.js', array(), '1.0' , true );
 }
 //when we want run this function
 add_action('wp_enqueue_scripts', 'rd_load_all_js');

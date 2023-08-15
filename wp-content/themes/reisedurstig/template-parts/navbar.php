@@ -49,8 +49,8 @@
             <i class="fa fa-youtube-play" aria-hidden="true"></i>
         </a>
         <!-- search-icon -->
-        <div id="search-icon">
-            <i class="fa fa-search"></i> <!-- Hier verwenden wir das FontAwesome-Suchsymbol -->
+        <div id="search-icon" class="social-icon-settings">
+            <i class="fa fa-search"></i>
         </div>
         <!-- Searchform -->
         <div id="search-form" style="display:none;">

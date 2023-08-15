@@ -13,3 +13,6 @@ $(this).prop('Counter',0).animate({
 }); 
 
 });  
+
+
+

@@ -1,0 +1,14 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const searchIcon = document.getElementById('search-icon');
+    const searchForm = document.getElementById('search-form');
+
+    if (searchIcon && searchForm) {
+        searchIcon.addEventListener('click', function() {
+            if (searchForm.style.display === 'none' || searchForm.style.display === '') {
+                searchForm.style.display = 'block';
+            } else {
+                searchForm.style.display = 'none';
+            }
+        });
+    }
+});
