@@ -691,5 +691,11 @@ function rdWidgetsInit() {
 		'name'          => 'Sidebar (Custom location)',
 		'id'            => 'sidebar1'
 	) );
+
+
+  register_sidebar(array(
+    'name' => 'Footer X (Keine dynamic_sidebar("footer1")',
+    'id' => 'footer1'
+));
 }
 add_action( 'widgets_init', 'rdWidgetsInit' );
