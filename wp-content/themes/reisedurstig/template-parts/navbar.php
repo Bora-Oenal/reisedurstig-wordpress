@@ -37,15 +37,15 @@
     <!-- Social Icons -->
     <div class="containerjustify-content-center m-4 header-social-icon-cnt">
         <!-- FaceBook Icon -->
-        <a href="#" class="social-icon-settings">
+        <a href="https://www.facebook.com/profile.php?id=100036881873671" class="social-icon-settings">
             <i class="fa fa-facebook" aria-hidden="true"></i>
         </a>
         <!-- Insta Icon -->
-        <a href="#" class="social-icon-settings">
+        <a href="https://www.instagram.com/reisedurstig.de/" class="social-icon-settings">
             <i class="fa fa-instagram" aria-hidden="true"></i>
         </a>
         <!-- YouTube Icon -->
-        <a href="#" class="social-icon-settings">
+        <a href="https://www.youtube.com/@reisedurstig4152" class="social-icon-settings">
             <i class="fa fa-youtube-play" aria-hidden="true"></i>
         </a>
     </div>

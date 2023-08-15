@@ -30,7 +30,7 @@
                 <i class="fa fa-facebook" aria-hidden="true"></i>
             </a>
             <a
-                href="https://www.linkedin.com/in/bora-%C3%B6nal-5a596813/"
+                href="https://www.linkedin.com/in/boraoenal-wordpress-woocommerce-shopify-frontend-development/"
                 class="footer-social-icon me-4 text-reset"
                 target="_blank">
                 <i class="fa fa-linkedin" aria-hidden="true"></i>
