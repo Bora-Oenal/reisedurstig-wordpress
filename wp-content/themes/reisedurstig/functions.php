@@ -650,3 +650,27 @@ function enqueue_custom_script_in_plugin() {
     wp_localize_script('custom-plugin-script', 'customPluginScriptData', $script_data);
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_script_in_plugin');
+
+
+// Funktion zum Erstellen des Shortcodes
+function google_maps_shortcode() {
+  ob_start(); // Pufferung starten
+  ?>
+  <!-- GoogleMAps-Section -->
+  <div class="container-md google-maps-cnt">
+      <h2 class="page-h2">Aktuell in</h2>
+      <div class="ratio ratio-16x9">
+          <!-- <iframe
+              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=medellin%20castilla+(My%20Business%20Name)&amp;t=&amp;z=5&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe> -->
+          <iframe
+              src="<?php echo esc_url(get_theme_mod('reisedurstig-gmaps-url')); ?>"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+      </div>
+  </div>
+  <?php
+  return ob_get_clean(); // Pufferung beenden und Inhalt zurückgeben
+}
+add_shortcode('google_maps', 'google_maps_shortcode'); // Shortcode hinzufügen
