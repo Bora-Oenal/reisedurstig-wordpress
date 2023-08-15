@@ -682,3 +682,14 @@ function google_maps_shortcode() {
   return ob_get_clean(); // Pufferung beenden und Inhalt zurückgeben
 }
 add_shortcode('google_maps', 'google_maps_shortcode'); // Shortcode hinzufügen
+
+
+
+// Register widget option in backend and add widget location (example:sidebar)
+function rdWidgetsInit() {
+	register_sidebar( array(
+		'name'          => 'Sidebar (Custom location)',
+		'id'            => 'sidebar1'
+	) );
+}
+add_action( 'widgets_init', 'rdWidgetsInit' );
