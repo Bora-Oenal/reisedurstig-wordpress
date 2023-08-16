@@ -139,6 +139,10 @@ h2.single-post-title {
 }
 .header-cnt {
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .rd-header {
     background-color: transparent;
@@ -166,8 +170,8 @@ ul.navbar-nav.mr-auto.menu-tablet-in-row {
 }
 p.footer-text-p.footer-icons.hero-arrow-icon {
     width: 100%;
-    position: relative;
-    top: 500px;
+    position: absolute;
+    bottom: 0;
     color: #FFFFFF;
     font-size: 60px;
     font-weight:100;
@@ -177,9 +181,9 @@ p.footer-text-p.footer-icons.hero-arrow-icon {
 p.footer-text-p.footer-icons.hero-arrow-icon.startpage {
     top: 450px;
 }
-.footer-text-p.footer-icons.hero-arrow-icon.stadt-arrow {
+/* .footer-text-p.footer-icons.hero-arrow-icon.stadt-arrow {
     top: 650px;
-}
+} */
 @media only screen and (max-width: 600px) {
     .navbar-collapse.collapse.in {
         display: flex;
@@ -274,15 +278,34 @@ a.social-icon-settings {
 #search-form {
     display: none;
     position: absolute;
-    top: 40px;
+    top: 50px;
     right: 0;
     background: #ffffff;
-    border: 1px solid #ccc;
     padding: 10px;
     text-decoration: none;
+    width: 1050px;
+    background-color: #1D62B3;
+    
 }
-
-
+.searchform div input#s {
+    width: 84%;
+    font-size:20px;
+}
+input#searchsubmit {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight:500;
+    background-color: #FFD600;
+    color: #1D62B3;
+    border:none;
+    width:150px;
+    margin-left: 2px;
+}
+input#searchsubmit:hover {
+    background-color: #FFFFFF;
+    color: #1D62B3;
+;
+}
 #search-icon i.fa.fa-search {
     color: #FFFFFF;
     margin: 0 10px;

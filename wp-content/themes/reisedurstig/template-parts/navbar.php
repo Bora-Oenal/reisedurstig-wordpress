@@ -48,6 +48,9 @@
         <a href="https://www.youtube.com/@reisedurstig4152" class="social-icon-settings">
             <i class="fa fa-youtube-play" aria-hidden="true"></i>
         </a>
+    </div>
+
+    <div class="header-search-cnt containerjustify-content-center m-4 header-social-icon-cnt">
         <!-- search-icon -->
         <div id="search-icon" class="social-icon-settings">
             <i class="fa fa-search"></i>
@@ -57,8 +60,6 @@
             <?php get_search_form(); ?>
         </div>
     </div>
-
-    <!-- </ul> -->
 
 </div>
 </nav>
