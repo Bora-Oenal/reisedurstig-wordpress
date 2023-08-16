@@ -4,8 +4,11 @@ import "../css/style.scss"
 import MobileMenu from "./modules/MobileMenu"
 import HeroSlider from "./modules/HeroSlider"
 
-// Instantiate a new object using our modules/classes
-const mobileMenu = new MobileMenu()
-const heroSlider = new HeroSlider()
+document.addEventListener("DOMContentLoaded", () => {
+  const mobileMenu = new MobileMenu()
+  const heroSlider = new HeroSlider()
+  
+  // Hier kannst du weitere Anweisungen hinzufügen, die nach dem Laden des DOMs ausgeführt werden sollen.
+});
 
 alert('Just a test');
