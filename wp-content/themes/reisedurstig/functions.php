@@ -648,7 +648,9 @@ function custom_theme_customizer( $wp_customize ) {
 
 // Diese Funktion ermöglicht die Parameterübergabe (Youtube-Api) von Customizer an JS-Datei (reisedurstig-youtube-plugin)
 function enqueue_custom_script_in_plugin() {
-    wp_enqueue_script('custom-plugin-script', plugin_dir_url( __FILE__ ) . '../../plugins/reisedurstig-youtube-plugin/youtube-script.js', array(), null, true);
+    // wp_enqueue_script('custom-plugin-script', plugin_dir_url( __FILE__ ) . 'youtube-script.js', array(), null, true);
+    wp_enqueue_script('custom-plugin-script', plugins_url( 'reisedurstig-youtube-plugin/youtube-script.js' ), array(), null, true);
+
 
     $api_key = get_theme_mod('reisedurstig-yt-api-key');
     $channel_id = get_theme_mod('reisedurstig-yt-channel-id');
