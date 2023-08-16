@@ -296,16 +296,20 @@ a.social-icon-settings {
     text-decoration: none;
     width: 1050px;
     background-color: #1D62B3;
-    
+}
+form#searchform div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 .searchform div input#s {
     width: 84%;
-    font-size:20px;
+    font-size:16px;
 }
 input#searchsubmit {
-    font-size: 20px;
+    font-size: 16px;
     text-transform: uppercase;
-    font-weight:500;
+    font-weight:600;
     background-color: #FFD600;
     color: #1D62B3;
     border:none;
