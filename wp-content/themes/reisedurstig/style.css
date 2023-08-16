@@ -126,6 +126,7 @@ h2.single-post-title {
     z-index: 1;
     object-fit: cover;
     object-position: 50% 50%;
+    height:100vh;
 }
 .header-video-single-bg {
     height: 70%;
@@ -169,6 +170,16 @@ ul.navbar-nav.mr-auto.menu-tablet-in-row {
     flex-direction: row;
 }
 p.footer-text-p.footer-icons.hero-arrow-icon {
+    width: 100%;
+    position: relative;
+    top: 200px;
+    color: #FFFFFF;
+    font-size: 40px;
+    font-weight:100;
+    z-index:5;
+    text-align:center;
+}
+p.footer-text-p.footer-icons.hero-search-arrow-icon {
     width: 100%;
     position: absolute;
     bottom: 0;
