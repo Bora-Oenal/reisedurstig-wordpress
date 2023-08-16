@@ -2,6 +2,11 @@
 /*
 * Registriere und Lade die CSS-Dateien */
 function rd_load_all_css(){
+  // Industry standard
+  wp_enqueue_style('university_extra_styles', get_theme_file_uri('/build/index.css'));
+  wp_enqueue_style('university_main_styles', get_theme_file_uri('/build/style-index.css'));
+
+  // Normal version
     wp_enqueue_style('normalize', get_template_directory_uri() . '/assets/css/normalize.css', array(), '1.0', 'all');
     wp_enqueue_style('bootstrap' , get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '1.0' , 'all' );
     wp_enqueue_style('font-awesome' , 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css', array(), '1.0' , 'all' );
@@ -23,8 +28,12 @@ function rd_load_all_js(){
     // wp_enqueue_script('youtube-script', get_template_directory_uri() . '/youtube-section/youtube-script.js', array('jquery'), null, true);
     // wird nicht mehr benötigt, da bereits im pluginordner erledigt
     // wp_enqueue_script('youtube-script', plugin_dir_url(__FILE__) . 'youtube-script.js', array('jquery'), null, true);
-    wp_enqueue_script('custom-js' , get_template_directory_uri() . '/assets/js/script.js', array(), '1.0' , true );
-    wp_enqueue_script('search-js' , get_template_directory_uri() . '/assets/js/search.js', array(), '1.0' , true );
+    wp_enqueue_script('customs' , get_template_directory_uri() . '/assets/js/script.js', array(), '1.0' , true );
+    wp_enqueue_script('search' , get_template_directory_uri() . '/assets/js/search.js', array(), '1.0' , true );
+  
+    //  Industry standard (university tutorial)
+    wp_enqueue_script('main-university-tutorial', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
+
 }
 //when we want run this function
 add_action('wp_enqueue_scripts', 'rd_load_all_js');
