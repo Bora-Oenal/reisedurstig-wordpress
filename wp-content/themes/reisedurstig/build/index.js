@@ -10,21 +10,20 @@
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/style.scss */ "./css/style.scss");
-/* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/MobileMenu */ "./src/modules/MobileMenu.js");
-/* harmony import */ var _modules_HeroSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/HeroSlider */ "./src/modules/HeroSlider.js");
+/* harmony import */ var _modules_HeroSlider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/HeroSlider */ "./src/modules/HeroSlider.js");
 
 
 // Our modules / classes
-
+// import MobileMenu from "./modules/MobileMenu"
 
 document.addEventListener("DOMContentLoaded", () => {
-  const mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_1__["default"]();
-  const heroSlider = new _modules_HeroSlider__WEBPACK_IMPORTED_MODULE_2__["default"]();
+  //   const mobileMenu = new MobileMenu()
+  const heroSlider = new _modules_HeroSlider__WEBPACK_IMPORTED_MODULE_1__["default"]();
 
   // Hier kannst du weitere Anweisungen hinzufügen, die nach dem Laden des DOMs ausgeführt werden sollen.
 });
 
-alert('Just a test');
+// alert('Just a test');
 
 /***/ }),
 
@@ -66,44 +65,6 @@ class HeroSlider {
   }
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HeroSlider);
-
-/***/ }),
-
-/***/ "./src/modules/MobileMenu.js":
-/*!***********************************!*\
-  !*** ./src/modules/MobileMenu.js ***!
-  \***********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-class MobileMenu {
-  constructor() {
-    console.log("MobileMenu constructor called");
-    this.menu = document.querySelector(".site-header__menu");
-    this.openButton = document.querySelector(".site-header__menu-trigger");
-    console.log("this.menu:", this.menu);
-    console.log("this.openButton:", this.openButton);
-    this.events();
-  }
-  events() {
-    console.log("Adding event listener");
-    console.log("this.openButton:", this.openButton);
-    this.openButton.addEventListener("click", () => this.openMenu());
-  }
-  openMenu() {
-    console.log("openMenu called");
-    this.openButton.classList.toggle("fa-bars");
-    this.openButton.classList.toggle("fa-window-close");
-    this.menu.classList.toggle("site-header__menu--active");
-  }
-}
-document.addEventListener("DOMContentLoaded", () => {
-  const mobileMenu = new MobileMenu();
-});
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MobileMenu);
 
 /***/ }),
 
