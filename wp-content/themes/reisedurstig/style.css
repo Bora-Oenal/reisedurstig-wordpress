@@ -1368,3 +1368,8 @@ h5.card-title.beach-section,
 h5.card-title.news-section {
     margin-bottom: 12px;
 }
+
+/* Search Result Page  */
+.container.container--narrow.page-section.start-page-cnt.search-result-page {
+    flex-direction: column;
+}

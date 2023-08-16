@@ -1,12 +1,11 @@
 <?php get_template_part('template-parts/header/header-search'); ?>
 
 <!-- Page Container -->
-<div class="container container--narrow page-section start-page-cnt">
-    <!-- Left-Container -->
-    <div class="news-left-cnt">
+<div class="container container--narrow page-section start-page-cnt search-result-page">
         <h2 class="page-h2">
-            Suchergebnisse
+            Suchergebnisse für "<?php the_search_query();?>"
         </h2>
+        
         <!-- Big Video Section -->
         <div class=" container-md video-cnt mx-width flx">
             
@@ -15,7 +14,7 @@
             while(have_posts()){
                 the_post(); ?>
             
-            <div class="col-sm-5 news-box video-card">
+            <div class="col-sm-4 news-box video-card">
                 <div class="post-item">
                     <a href="<?php the_permalink();?>" class="thumb-a">
                             <?php the_post_thumbnail('cityBoxImagesThumbnails', array('class' =>
@@ -48,10 +47,6 @@
         <!-- <?php echo paginate_links(  );?> -->
     </div>
     <!-- Right-Container -->
-    <div class="news-right-cnt">
-        <!-- hier rufen wir unser custom sdiebar auf (widget-Thema) -->
-        <?php dynamic_sidebar('sidebar1'); ?>
-    </div>     
 </div>
 
-    <?php get_footer(); ?>
+<?php get_footer(); ?>

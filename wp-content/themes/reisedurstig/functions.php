@@ -231,7 +231,6 @@ function mytheme_register_theme_settings_page() {
 		'theme-settings',
 		'mytheme_render_theme_settings_page'
 	);
-
 	// Füge die einzelnen Felder zur Seite hinzu
 	add_settings_section(
 		'ct_custom_theme_settings_section',
@@ -239,7 +238,7 @@ function mytheme_register_theme_settings_page() {
 		'',
 		'theme-settings'
 	);
-// Feld für Footer Logo
+  // Feld für Footer Logo
 	add_settings_field(
 		'logo_image',
 		'Logo Image',
@@ -271,7 +270,6 @@ function mytheme_register_theme_settings_page() {
 		'theme-settings',
 		'ct_custom_theme_settings_section'
 	);
-
 // Feld für E-Mail field Footer Mitte
 	add_settings_field(
 		'email',
@@ -289,29 +287,23 @@ function mytheme_register_theme_settings_page() {
 		'ct_custom_theme_settings_section'
 	);
 
-
-
 	// Registriere die Einstellungen
 	register_setting(
 		'theme-settings-group',
 		'logo_image'
 	);
-
 	register_setting(
 		'theme-settings-group',
 		'headline_footer_left'
 	);
-
 	register_setting(
 		'theme-settings-group',
 		'text_footer_left'
 	);
-
 	register_setting(
 		'theme-settings-group',
 		'current_location'
 	);
-
 	register_setting(
 		'theme-settings-group',
 		'phone_number'
@@ -600,6 +592,7 @@ function custom_theme_customizer( $wp_customize ) {
       'blog_post' => 'Blog Post Pages',
       'contact' => 'Contact Page',
       'support' => 'Support Me Page',
+      'search' => 'Search Page'
     );
   
     foreach ( $pages as $slug => $label ) {

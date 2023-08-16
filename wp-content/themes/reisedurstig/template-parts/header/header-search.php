@@ -17,13 +17,13 @@
 
                 <?php
                 // Holen der Hero Video Einstellung für die Stadt-Archivseite
-                $hero_video_archive_stadt_id = get_theme_mod( 'hero_video_archive_stadt_id' );
+                $hero_video_search_id = get_theme_mod( 'hero_video_search_id' );
 
                 // Die URL des ausgewählten Hero Videos erhalten
-                $hero_video_archive_stadt_url = wp_get_attachment_url( $hero_video_archive_stadt_id );
+                $hero_video_search_url = wp_get_attachment_url( $hero_video_search_id );
 
                 // Wenn eine URL vorhanden ist, das Video anzeigen
-                if ( ! empty( $hero_video_archive_stadt_url ) ) :
+                if ( ! empty( $hero_video_search_url ) ) :
                 ?>
                     <video
                         class="position-absolute w-100 header-video-bg"
@@ -33,7 +33,7 @@
                         loop=""
                         playsinline="">
                         <source
-                            src="<?php echo esc_url( $hero_video_archive_stadt_url ); ?>"
+                            src="<?php echo esc_url( $hero_video_search_url ); ?>"
                             type="video/mp4">
                     </video>
                 <?php endif; ?>
