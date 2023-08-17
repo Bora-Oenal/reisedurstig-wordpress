@@ -205,7 +205,7 @@
 <div class="container city-section-cnt">
     <?php 
     $newestCountries = new WP_Query(array( 
-        'posts_per_page'=> 6, 
+        'posts_per_page'=> 3, 
         'post_type' => 'land',
         'orderby' => 'rand'
         )); 
@@ -264,7 +264,7 @@
     <?php 
     $today = date('Ymd'); 
     $newestCities = new WP_Query(array( 
-        'posts_per_page'=> 6, 
+        'posts_per_page'=> 3, 
         'post_type' => 'stadt', 
         'meta_key' => 'reisedatum', 
         'orderby' => 'meta_value_num', 
@@ -333,7 +333,7 @@
 </div>
 
 <!-- Counter-Section -->
-<div class=" container-md counter-cnt">
+<div class="container-md counter-cnt">
     <h2 class="page-h2">Reisedurstig in Zahlen</h2>
     <!-- Counter -->
     <section class=" wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">
@@ -370,7 +370,7 @@
 </div>
 
 <!-- Strände Section -->
-<div class=" container-md counter-cnt">
+<div class="container-md counter-cnt">
     <div class="page-content-cnt">
         <!-- Custom-Post-Type-Title -->
         <?php
@@ -445,7 +445,7 @@
 </div>
 
 <!-- Planet Section -->
-<div class=" container-md counter-cnt">
+<div class="container-md counter-cnt">
     <div class="page-content-cnt">
         <!-- Custom-Post-Type-Title -->
         <?php
@@ -460,8 +460,10 @@
             <div class="container news-section-startpage-cnt">
                 <!-- Mit WP_Query kann ich bestimmte Daten abfragen -->
                 <?php $newestPosts = new WP_Query(array( 
-                    'posts_per_page' => 6, 
-                    'post_type' => 'planet' )); 
+                    'posts_per_page'=> 3, 
+                    'post_type' => 'planet',
+                    'orderby' => 'rand'
+                )); 
                     while ($newestPosts->have_posts()) { 
                     $newestPosts->the_post(); 
                 ?>
