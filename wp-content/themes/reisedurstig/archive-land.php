@@ -23,7 +23,7 @@ ARCHIVE-LAND.PHP
                 //     )
                 // )
             ));
-    while($neuesteLand->have_posts()){
+        while($neuesteLand->have_posts()){
         $neuesteLand->the_post(); ?>
         <div class="col-sm-4 city-box-archive">
             <div class="city-box-wrapper card">
@@ -72,6 +72,28 @@ ARCHIVE-LAND.PHP
 
         <?php }?>
     </div>
+    <!-- Google Maps Integration -->
+    <!-- Give the div data-attributes -->
+    <div class="acf-map">
+    <?php 
+    $newestCities = new WP_Query(array(
+        'post_per_page'=> '-1',
+        'post_type' => 'stadt'
+    )); 
+    while ($newestCities->have_posts()) {
+        $newestCities->the_post(); 
+        $mapLocation = get_field('map_location');    
+        ?>
+
+        <div id="marker" class="google-maps-cnt" data-latitude="<?php echo $mapLocation['lat']; ?>" data-longitude="<?php echo $mapLocation['lng']; ?>">
+        </div>
+        
+    <?php 
+                } // Ende der while-Schleife
+                wp_reset_postdata(); // Zurücksetzen der Abfrage
+                ?>
+
+            </div>
     <!-- // pagination shown if more than 10 posts -->
     <!-- <?php echo paginate_links(  );?> -->
 

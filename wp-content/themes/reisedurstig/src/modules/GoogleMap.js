@@ -6,7 +6,7 @@ class GMap {
   }
 
   new_map($el) {
-    var $markers = $el.querySelectorAll(".marker")
+    var $markers = $el.querySelectorAll("#marker")
 
     var args = {
       zoom: 16,
@@ -28,7 +28,7 @@ class GMap {
   } // end new_map
 
   add_marker($marker, map) {
-    var latlng = new google.maps.LatLng($marker.getAttribute("data-lat"), $marker.getAttribute("data-lng"))
+    var latlng = new google.maps.LatLng($marker.getAttribute("data-latitude"), $marker.getAttribute("data-longitude"))
 
     var marker = new google.maps.Marker({
       position: latlng,

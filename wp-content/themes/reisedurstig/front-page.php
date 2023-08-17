@@ -319,9 +319,11 @@
     </p>
 </div>
 
-<!-- GoogleMAps-Section -->
-<div class=" container-md google-maps-cnt">
-    <h2 class="page-h2">Where I have Been</h2>
+
+
+<!-- GoogleMAps-Section Setting by Customizer -->
+<div class=" container">
+    <h2 class="page-h2">Where I am at Moment</h2>
     <div class=" ratio ratio-16x9">
             <!-- <iframe
                 src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=medellin%20castilla+(My%20Business%20Name)&amp;t=&amp;z=5&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
