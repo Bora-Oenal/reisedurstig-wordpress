@@ -75,14 +75,10 @@ ARCHIVE-LAND.PHP
     <!-- Google Maps Integration -->
     <!-- Give the div data-attributes -->
     <div class="acf-map">
-    <?php 
-    $newestCities = new WP_Query(array(
-        'post_per_page'=> '-1',
-        'post_type' => 'stadt'
-    )); 
-    while ($newestCities->have_posts()) {
-        $newestCities->the_post(); 
-        $mapLocation = get_field('map_location');    
+        <?php 
+            while (have_posts()) {
+                the_post(); 
+                $mapLocation = get_field('map_location');    
         ?>
 
         <div id="marker" class="google-maps-cnt" data-latitude="<?php echo $mapLocation['lat']; ?>" data-longitude="<?php echo $mapLocation['lng']; ?>">
@@ -90,7 +86,6 @@ ARCHIVE-LAND.PHP
         
     <?php 
                 } // Ende der while-Schleife
-                wp_reset_postdata(); // Zurücksetzen der Abfrage
                 ?>
 
             </div>
