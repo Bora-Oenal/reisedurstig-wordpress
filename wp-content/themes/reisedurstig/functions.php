@@ -38,6 +38,17 @@ function rd_load_all_js(){
 //when we want run this function
 add_action('wp_enqueue_scripts', 'rd_load_all_js');
 
+/*
+* Stelle die google api für das Backend zur Verfügung damit google maps funktioniert */
+function my_acf_google_map_api( $api ){
+	
+	$api['key'] = 'API-KEY';
+	return $api;
+	
+}
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+
+
 // Load Title Dynamically in the title-tag, but in the header-section, of each page
 // Make them available to edit them at Backend 
 function rd_load_page_titles() {
