@@ -322,18 +322,13 @@
 
 
 <!-- GoogleMAps-Section Setting by Customizer -->
-<div class=" container">
+<div class="container gmaps-wrapper">
     <h2 class="page-h2">Where I am at Moment</h2>
-    <div class=" ratio ratio-16x9">
-            <!-- <iframe
-                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=medellin%20castilla+(My%20Business%20Name)&amp;t=&amp;z=5&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe> -->
-            <iframe
-                src="<?php echo esc_url( get_theme_mod('reisedurstig-gmaps-url') ); ?>"
-                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-
+    <div class="gmaps-cnt ratio ratio-16x9">
+        <iframe
+            src="<?php echo esc_url( get_theme_mod('reisedurstig-gmaps-url') ); ?>"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
     </div>
 </div>
 
@@ -342,35 +337,35 @@
     <h2 class="page-h2">Reisedurstig in Zahlen</h2>
     <!-- Counter -->
     <section class=" wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">
-            <div class="container">
-                <div class="row counter-row">
-                    <!-- counter -->
-                    <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten animated counter-box"
-                        data-wow-duration="300ms"
-                        style="visibility: visible; animation-duration: 300ms; animation-name: fadeInUp;">
-                        <span id="anim-number-pizza" class="counter-number"></span>
-                        <span class="timer counter alt-font appear" data-to="980" data-speed="7000">5</span>
-                        <p class="counter-title">Kontinente</p>
-                    </div>
-                    <!-- end counter -->
-                    <!-- counter -->
-                    <div class="col-md-3 col-sm-6 bottom-margin-small text-center counter-section wow fadeInUp xs-margin-bottom-ten animated counter-box"
-                        data-wow-duration="900ms"
-                        style="visibility: visible; animation-duration: 900ms; animation-name: fadeInUp;">
-                        <span class="timer counter alt-font appear" data-to="810" data-speed="7000">28</span>
-                        <span class="counter-title">Länder besucht</span>
-                    </div>
-                    <!-- end counter -->
-                    <!-- counter -->
-                    <div class="col-md-3 col-sm-6 text-center counter-section wow fadeInUp animated counter-box"
-                        data-wow-duration="1200ms"
-                        style="visibility: visible; animation-duration: 1200ms; animation-name: fadeInUp;">
-                        <span class="timer counter alt-font appear" data-to="600" data-speed="7000">167</span>
-                        <span class="counter-title">Länder noch offen</span>
-                    </div>
-                    <!-- end counter -->
+        <div class="container">
+            <div class="row counter-row">
+                <!-- counter -->
+                <div class="col-md-3 col-sm-6 bottom-margin text-center counter-section wow fadeInUp sm-margin-bottom-ten animated counter-box"
+                    data-wow-duration="300ms"
+                    style="visibility: visible; animation-duration: 300ms; animation-name: fadeInUp;">
+                    <span id="anim-number-pizza" class="counter-number"></span>
+                    <span class="timer counter alt-font appear" data-to="980" data-speed="7000">5</span>
+                    <p class="counter-title">Kontinente</p>
                 </div>
+                <!-- end counter -->
+                <!-- counter -->
+                <div class="col-md-3 col-sm-6 bottom-margin-small text-center counter-section wow fadeInUp xs-margin-bottom-ten animated counter-box"
+                    data-wow-duration="900ms"
+                    style="visibility: visible; animation-duration: 900ms; animation-name: fadeInUp;">
+                    <span class="timer counter alt-font appear" data-to="810" data-speed="7000">28</span>
+                    <span class="counter-title">Länder besucht</span>
+                </div>
+                <!-- end counter -->
+                <!-- counter -->
+                <div class="col-md-3 col-sm-6 text-center counter-section wow fadeInUp animated counter-box"
+                    data-wow-duration="1200ms"
+                    style="visibility: visible; animation-duration: 1200ms; animation-name: fadeInUp;">
+                    <span class="timer counter alt-font appear" data-to="600" data-speed="7000">167</span>
+                    <span class="counter-title">Länder noch offen</span>
+                </div>
+                <!-- end counter -->
             </div>
+        </div>
     </section>
 </div>
 

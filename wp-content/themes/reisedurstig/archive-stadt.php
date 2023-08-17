@@ -32,20 +32,21 @@
                             </h2>
                             <a class="land-archive-a" href="<?php echo home_url('/land/' . sanitize_title(get_field('land'))); ?>"><?php echo get_field('land'); ?></a>
                         </div>
-                        <?php echo get_the_date(); ?>
+                        
 
                                 <!-- <?php the_author_posts_link(); ?>  -->
                                 <!-- im Themenbereich "<?php echo get_the_category_list(', ');?>" -->
                             <!-- </p> -->
                         <!-- </div>  -->
                         <div class="generic-code">
-                            <?php the_excerpt(); ?>
-                            <p>
+                            <p class="travel-date-p">
                                 <?php $reisedatum = get_post_meta(get_the_ID(), 'reisedatum', true); if
                                 ($reisedatum) { $travelTime = new DateTime($reisedatum); echo
                                 $travelTime->format('M.Y'); } ?>
 
                             </p>
+                            <?php the_excerpt(); ?>
+
                             <p>
                                 <a href="<?php the_permalink()?>" class="btn btn-posts btn-startpage btn-city-arcvive">Mehr zu
                                     <?php the_title();?>

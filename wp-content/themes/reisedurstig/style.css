@@ -446,6 +446,13 @@ a.btn.btn-startpage{
 .container-md.video-cnt {
     max-width: 1000px;
 }
+.gmaps-cnt.ratio.ratio-16x9 iframe,
+.container.gmaps-wrapper {
+    height: 300px;
+}
+.container.gmaps-wrapper {
+    margin-bottom: 250px;
+}
 /* Startpage YouTube Section */
 /* YouTube Plugin */
 .container-md.video-cnt.mx-width {
@@ -1102,6 +1109,10 @@ h6.text-uppercase.fw-bold.mb-4 p {
 }
 
 /* Städte Archiv */
+.post-item {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
 .alert.alert-info.meta-box-city-archive {
     background-color: #f7f7f7;
     margin-top: 20px;

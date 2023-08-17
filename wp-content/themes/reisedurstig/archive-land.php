@@ -82,6 +82,7 @@ ARCHIVE-LAND.PHP
         ?>
 
         <div id="marker" class="google-maps-cnt" data-latitude="<?php echo $mapLocation['lat']; ?>" data-longitude="<?php echo $mapLocation['lng']; ?>">
+        Hallo123
         </div>
         
     <?php 
