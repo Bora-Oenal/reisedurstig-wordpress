@@ -67,11 +67,11 @@
     ?>
     <!-- Google Maps Integration -->
     <!-- Give the div data-attributes -->
-    <div class="acf-map">
+    <!-- <div class="acf-map">
         <div id="marker" class="google-maps-cnt" data-latitude="<?php echo $mapLocation['lat']?>" data-longitude="<?php echo $mapLocation['lng']?>" >
 
         </div>
-    </div>
+    </div> -->
 </div>
 
 <br /><br />

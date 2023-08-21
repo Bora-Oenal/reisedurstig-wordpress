@@ -4,8 +4,8 @@
 <!-- News-Section -->
 <div class=" container-md counter-cnt insta-cnt">
     <!-- Custom-Post-Type-Title -->
-    <h2 class="page-h2">Letzten News</h2>
-    <p class="intro-txt">Sorted Random</p>
+    <h2 class="page-h2">Letzten Berichte</h2>
+    <!-- <p class="intro-txt">Sorted Random</p> -->
 </div>
 <!-- News Container -->
 <div class="container city-section-cnt">
@@ -63,9 +63,9 @@
     // Hole den benutzerdefinierten Beitragstyp "Insel"
     $insel_post_type = get_post_type_object('insel');
     // Zeige den Namen des benutzerdefinierten Beitragstyps "Insel" an
-    echo '<h2 class="page-h2">' . $insel_post_type->labels->name . ' (Custom-Post-Type)</h2>';
+    echo '<h2 class="page-h2">' . $insel_post_type->labels->name . '</h2>';
     ?>
-    <p class="intro-txt">Sorted Random</p>
+    <!-- <p class="intro-txt">Sorted Random</p> -->
 </div>
 <!-- Inseln Container -->
 <div class="container city-section-cnt">
@@ -197,9 +197,9 @@
         // Hole den benutzerdefinierten Beitragstyp "Land"
         $land_post_type = get_post_type_object('land');
         // Zeige den Namen des benutzerdefinierten Beitragstyps "Land" an
-        echo '<h2 class="page-h2">' . $land_post_type->labels->name . ' (Custom-Post-Type)</h2>';
+        echo '<h2 class="page-h2">' . $land_post_type->labels->name . '</h2>';
         ?>
-    <p class="intro-txt">Sorted ASC by Random</p>
+    <!-- <p class="intro-txt">Sorted ASC by Random</p> -->
 </div>
 <!-- Länder Container -->
 <div class="container city-section-cnt">
@@ -255,9 +255,9 @@
     // Hole den benutzerdefinierten Beitragstyp "Stadt"
     $stadt_post_type = get_post_type_object('stadt');
     // Zeige den Namen des benutzerdefinierten Beitragstyps "Stadt" an
-    echo '<h2 class="page-h2">' . $stadt_post_type->labels->name . ' (Custom-Post-Type)</h2>';
+    echo '<h2 class="page-h2">' . $stadt_post_type->labels->name . '</h2>';
     ?>
-    <p class="intro-txt">Sorted ASC by Travel-Date</p>
+    <!-- <p class="intro-txt">Sorted ASC by Travel-Date</p> -->
 </div>
 <!-- Städte Container -->
 <div class="container city-section-cnt">
@@ -323,7 +323,7 @@
 
 <!-- GoogleMAps-Section Setting by Customizer -->
 <div class="container gmaps-wrapper">
-    <h2 class="page-h2">Where I am at Moment</h2>
+    <h2 class="page-h2">Where I am at moment</h2>
     <div class="gmaps-cnt ratio ratio-16x9">
         <iframe
             src="<?php echo esc_url( get_theme_mod('reisedurstig-gmaps-url') ); ?>"
@@ -377,7 +377,7 @@
         // Hole den benutzerdefinierten Beitragstyp "Strand"
         $strand_post_type = get_post_type_object('strand');
         // Zeige den Namen des benutzerdefinierten Beitragstyps "Strand" an
-        echo '<h2 class="page-h2">' . $strand_post_type->labels->name . ' (Custom-Post-Type)</h2>';
+        echo '<h2 class="page-h2">' . $strand_post_type->labels->name . ' </h2>';
         ?>
         <div class="container">
             <p class="lead cta-flex">
@@ -441,80 +441,6 @@
             echo 'Alle ' . $strand_post_type->labels->name;
             ?>
         &raquo</a>
-    </div>
-</div>
-
-<!-- Planet Section -->
-<div class="container-md counter-cnt">
-    <div class="page-content-cnt">
-        <!-- Custom-Post-Type-Title -->
-        <?php
-        // Hole den benutzerdefinierten Beitragstyp "Planet"
-        $planet_post_type = get_post_type_object('planet');
-        // Zeige den Namen des benutzerdefinierten Beitragstyps "Planet" an
-        echo '<h2 class="page-h2">' . $planet_post_type->labels->name . ' (Custom-Post-Type)</h2>';
-        ?>
-        <div class="container">
-            <p class="lead cta-flex">
-                <!-- Planeten Container -->
-            <div class="container news-section-startpage-cnt">
-                <!-- Mit WP_Query kann ich bestimmte Daten abfragen -->
-                <?php $newestPosts = new WP_Query(array( 
-                    'posts_per_page'=> 3, 
-                    'post_type' => 'planet',
-                    'orderby' => 'rand'
-                )); 
-                    while ($newestPosts->have_posts()) { 
-                    $newestPosts->the_post(); 
-                ?>
-                <div class="col-sm-4">
-                    <div class="flx-circle-post">
-                        <a href="<?php the_permalink()?>">
-                            <div class="date-rounded">
-                                <p class="day-p"><?php the_time('d') ?></p>
-                                <p class="month-p"><?php the_time('M') ?></p>
-                            </div>
-                        </a>
-
-                        <div class="col-m-12 card card-rd">
-                            <?php the_post_thumbnail('cityBoxImagesThumbnails', array('class' =>
-                            'card-img-top', 'alt' => '...')); ?>
-                            <div class="card-body">
-                                <h5 class="card-title news-section">
-                                    <a href="<?php the_permalink(); ?>">
-                                        <?php the_title() ?>
-                                    </a>
-                                </h5>
-                                <!-- Hier erfolgt eine Abfrage excerpt vs content -->
-                                <p>
-                                    <!-- Abfrage-> wenn excerpt zeige an, sonst zeige the_content -->
-                                    <?php 
-                                        echo wp_trim_words(get_the_content(), 11);
-                                    ?>
-                                </p>
-                                <!-- <hr> -->
-                                <!-- Vorheriger Code folgt darunter -->
-                                <!-- Loop from Content:
-                                <p class="card-text"><?php echo wp_trim_words(get_the_content(), 10 ); ?></p> -->
-                                <!-- Loop from Excerpt:
-                                <p class="excerpt-p">
-                                    <?php the_excerpt( );?>
-                                </p> -->
-                                <a href="<?php the_permalink()?>" class="btn btn-posts btn-startpage">Mehr Erfahren &raquo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <?php }
-                wp_reset_postdata();
-                ?>
-            </div>
-            </p>
-        </div>
-    </div>
-    <div class="container container-btn">
-        <a class="btn btn-posts btn-lg" href="<?php echo site_url('/planets');?>" role="button">Alle Planeten
-            &raquo</a>
     </div>
 </div>
 
