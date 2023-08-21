@@ -332,12 +332,26 @@ input#searchsubmit:hover {
     align-items: center;
     display: flex;
 }
-
-
-
 .search-form
 .search-submit { 
 display:none;
+}
+
+/* Search Ajax */
+.search-overlay__top {
+    position: relative;
+    top: 35px;
+}
+div#search-icon\ search-icon-ajax i,
+i.fa.fa-search.search-overlay__icon,
+div#search-icon\ search-icon-ajax {
+    color: yellow;
+    font-size: 30px;
+}
+i.fa.fa-search.search-overlay__icon,
+i.fa.fa-window-close.search-overlay__close {
+    font-size: 33px;
+    color: #1D62B3;
 }
 
 .container.hero-cnt {
