@@ -192,9 +192,9 @@ p.footer-text-p.footer-icons.hero-search-arrow-icon {
 p.footer-text-p.footer-icons.hero-arrow-icon.startpage {
     top: 450px;
 }
-/* .footer-text-p.footer-icons.hero-arrow-icon.stadt-arrow {
-    top: 650px;
-} */
+img.logo-footer {
+    max-width: 100px;
+}
 @media only screen and (max-width: 600px) {
     .navbar-collapse.collapse.in {
         display: flex;
@@ -243,11 +243,13 @@ a.navbar-brand.logo-a {
     position: relative;
     z-index: 3;
 }
-ul.navbar-nav.mr-auto li a:hover {
+ul.navbar-nav.mr-auto li a:hover,
+ul.navbar-nav.mr-auto li a:active
+ {
     color: #FFD600;
 }
 .navbar-toggler-icon {
-    background-color: yellow;
+    background-color: #FFD600;
     height: 20px;
     width: 20px;
 }
@@ -345,8 +347,15 @@ display:none;
 div#search-icon\ search-icon-ajax i,
 i.fa.fa-search.search-overlay__icon,
 div#search-icon\ search-icon-ajax {
-    color: yellow;
-    font-size: 30px;
+    color: #FFD600;
+    font-size: 18px;
+    line-height: 1;
+    margin: 0 10px;
+    cursor: pointer;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 i.fa.fa-search.search-overlay__icon,
 i.fa.fa-window-close.search-overlay__close {
