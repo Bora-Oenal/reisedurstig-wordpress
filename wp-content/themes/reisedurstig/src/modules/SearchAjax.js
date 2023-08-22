@@ -1,3 +1,5 @@
+// this is the js-script for ajax search
+
 import $ from 'jquery';
 
 class SearchObject {
