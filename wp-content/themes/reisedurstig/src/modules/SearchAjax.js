@@ -1,32 +1,83 @@
-// this is the js-script for ajax search
+// this is the js-file for ajax search
 
-import $ from 'jquery';
+import $ from "jquery"
+class SearchAjax {
+  // 1. describe and create/initiate our object
+  constructor() {
+    this.resultsDiv = $("#search-overlay__results")
+    this.openButton = $(".js-search-trigger")
+    this.closeButton = $(".search-overlay__close")
+    this.searchOverlay = $(".search-overlay")
+    this.searchField = $("#search-term")
+    this.events()
+    this.isOverlayOpen = false
+    this.isSpinnerVisible = false
+    this.previousValue
+    this.typingTimer
+  }
 
-class SearchObject {
-    //1. create and initiate the object
-    constructor() {
-        this.openButtons = document.querySelectorAll(".js-search-trigger");
-        this.closeButton = document.querySelector(".search-overlay__close");
-        this.searchOverlay = document.querySelector(".search-overlay");
-        this.events();
+  // 2. events
+  events() {
+    this.openButton.on("click", this.openOverlay.bind(this))
+    this.closeButton.on("click", this.closeOverlay.bind(this))
+    $(document).on("keydown", this.keyPressDispatcher.bind(this))
+    this.searchField.on("keyup", this.typingLogic.bind(this))
+  }
+
+  // 3. methods (function, action...)
+  typingLogic() {
+    if (this.searchField.val() != this.previousValue) {
+      clearTimeout(this.typingTimer)
+
+      if (this.searchField.val()) {
+        if (!this.isSpinnerVisible) {
+          this.resultsDiv.html('<div class="spinner-loader"></div>')
+          this.isSpinnerVisible = true
+        }
+        this.typingTimer = setTimeout(this.getResults.bind(this), 2000)
+      } else {
+        this.resultsDiv.html("")
+        this.isSpinnerVisible = false
+      }
     }
 
-    //2. events
-    events() {
-        this.openButtons.forEach(button => {
-            button.addEventListener('click', this.openOverlay.bind(this));
-        });
-        this.closeButton.addEventListener('click', this.closeOverlay.bind(this));
+    this.previousValue = this.searchField.val()
+  }
+
+  getResults() {
+    $.getJSON("wp-json/wp/v2/posts?search=" + this.searchField.val(), posts => {
+      this.resultsDiv.html(`
+        <h2 class="search-overlay__section-title">General Information</h2>
+        <ul class="link-list min-list">
+          ${posts.map(item => `<li><a href="${item.link}">${item.title.rendered}</a></li>`).join("")}
+        </ul>
+      `)
+    })
+  }
+
+  keyPressDispatcher(e) {
+    if (e.keyCode == 83 && !this.isOverlayOpen && !$("input, textarea").is(":focus")) {
+      this.openOverlay()
     }
 
-    //3. methods (or functions)
-    openOverlay() {
-        this.searchOverlay.classList.add('search-overlay--active');
+    if (e.keyCode == 27 && this.isOverlayOpen) {
+      this.closeOverlay()
     }
+  }
 
-    closeOverlay() {
-        this.searchOverlay.classList.remove('search-overlay--active');
-    }
+  openOverlay() {
+    this.searchOverlay.addClass("search-overlay--active")
+    $("body").addClass("body-no-scroll")
+    console.log("our open method just ran!")
+    this.isOverlayOpen = true
+  }
+
+  closeOverlay() {
+    this.searchOverlay.removeClass("search-overlay--active")
+    $("body").removeClass("body-no-scroll")
+    console.log("our close method just ran!")
+    this.isOverlayOpen = false
+  }
 }
 
-export default SearchObject;
+export default SearchAjax
