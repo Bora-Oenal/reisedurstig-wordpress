@@ -11,15 +11,25 @@ Template Name: Search Page
         <h2 class="page-h2">
             Suchergebnisse für "<?php the_search_query();?>"
         </h2>
-        
         <!-- Big Video Section -->
         <div class=" container-md video-cnt mx-width flx">
             
-            <!-- Ab hier loopen wir immer mit while -->
+            <!-- Alle Ergebnisse mit allen post types-->
             
             <?php 
-            while(have_posts()){
-                the_post(); ?>
+                $args = array(
+                    'post_type' => 'any' // Beitragstypen 
+                );
+
+                $searchResults = new WP_Query($args);
+
+                while ($searchResults->have_posts()) {
+                    $searchResults->the_post();
+
+                    // Hier können Sie den Inhalt für jeden Beitrag ausgeben
+                }
+                wp_reset_postdata();
+                ?>
             
             <div class="col-sm-4 news-box video-card">
                 <div class="post-item">
@@ -47,7 +57,7 @@ Template Name: Search Page
                 </div>
             </div>
         
-            <?php }
+            <?php 
             // pagination shown if more than 10 posts 
             ?>
         </div>

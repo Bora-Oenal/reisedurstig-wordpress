@@ -311,7 +311,7 @@ a.social-icon-settings {
     padding: 10px;
     text-decoration: none;
     width: 825px;
-    background-color: #1D62B3;
+    background-color: transparent;
 }
 form#searchform div {
     display: flex;
@@ -323,7 +323,7 @@ form#searchform div {
     font-size:16px;
 }
 input#searchsubmit {
-    font-size: 16px;
+    font-size: 18px;
     text-transform: uppercase;
     font-weight:600;
     background-color: #FFD600;
