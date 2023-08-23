@@ -310,7 +310,7 @@ a.social-icon-settings {
     background: #ffffff;
     padding: 10px;
     text-decoration: none;
-    width: 1050px;
+    width: 825px;
     background-color: #1D62B3;
 }
 form#searchform div {
@@ -1012,6 +1012,11 @@ section.d-flex {
     .header-video-single-bg {
         height: 100vh;
     }
+}
+.footer-flex-cnt {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
 }
 .container.footer-compl {
     color: #FFFFFF;

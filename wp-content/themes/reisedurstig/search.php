@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: Search Page
+*/
+?>
+
 <?php get_template_part('template-parts/header/header-search'); ?>
 
 <!-- Page Container -->
@@ -10,6 +16,7 @@
         <div class=" container-md video-cnt mx-width flx">
             
             <!-- Ab hier loopen wir immer mit while -->
+            
             <?php 
             while(have_posts()){
                 the_post(); ?>
@@ -27,7 +34,8 @@
                     </div>
                 </div>
                 <div class="generic-code">
-                    <p class="card-text blog-box"><?php echo wp_trim_words(get_the_excerpt(), 30 ); ?></p>
+                    <p class="card-text blog-box"><?php echo wp_trim_words(get_the_excerpt(), 30 ); ?>
+                    </p>
                     <!-- <?php the_excerpt(); ?> -->
                     <p>
                         <a class="btn btn-posts btn-startpage news-box" href="<?php the_permalink() ?>">Mehr erfahren &raquo</a>
@@ -36,7 +44,6 @@
                         <!-- <a class="btn-primary" href="<?php echo get_permalink() ?>">Mehr erfahren &raquo</a> -->
                     </p>
                     <!-- <?php the_content(); ?> -->
-
                 </div>
             </div>
         
@@ -44,8 +51,6 @@
             // pagination shown if more than 10 posts 
             ?>
         </div>
-        <!-- <?php echo paginate_links(  );?> -->
-    </div>
     <!-- Right-Container -->
 </div>
 

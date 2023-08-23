@@ -59,10 +59,6 @@
         <div id="search-form" style="display:none;">
             <?php get_search_form(); ?>
         </div>
-        <!-- AjaxSearch-Version -->
-        <div id="search-icon search-icon-ajax" class="social-icon-settings js-search-trigger">
-            <i class="fa fa-search"></i>
-        </div>
     </div>
 
 </div>

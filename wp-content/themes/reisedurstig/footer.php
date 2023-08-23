@@ -132,16 +132,22 @@
                             <?php mytheme_display_phone_number(); ?> 
                         </p> -->
                         
-                        <!-- Logo Footer Theme-Settings auswählbar -->
-                        <?php 
-                            $logo_image_id = get_option('logo_image');
-                            if ($logo_image_id) {
-                                $logo_image_url = wp_get_attachment_url($logo_image_id);
-                                if ($logo_image_url) {
-                                    echo '<img class="logo-footer" src="' . esc_url($logo_image_url) . '" alt="Logo" />';
+                        <div class="footer-flex-cnt">
+                            <!-- Logo Footer Theme-Settings auswählbar -->
+                            <?php 
+                                $logo_image_id = get_option('logo_image');
+                                if ($logo_image_id) {
+                                    $logo_image_url = wp_get_attachment_url($logo_image_id);
+                                    if ($logo_image_url) {
+                                        echo '<img class="logo-footer" src="' . esc_url($logo_image_url) . '" alt="Logo" />';
+                                    }
                                 }
-                            }
-                        ?>
+                            ?>
+                            <!-- AjaxSearch-Version -->
+                            <div id="search-icon search-icon-ajax" class="social-icon-settings js-search-trigger">
+                                <i class="fa fa-search"></i>
+                            </div>
+                        </div>
                     </div>
 				</div>
                 <!-- Grid column -->
