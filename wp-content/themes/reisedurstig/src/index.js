@@ -9,7 +9,7 @@ import SearchAjax from "./modules/SearchAjax"
 document.addEventListener("DOMContentLoaded", () => {
 //   const mobileMenu = new MobileMenu()
   const heroSlider = new HeroSlider()
-  // const googleMap = new GoogleMap()
+  // const googleMap = new GoogleMap() //ausgeblendet
   const searchAjax = new SearchAjax()
   
   // Hier kannst du weitere Anweisungen hinzufügen, die nach dem Laden des DOMs ausgeführt werden sollen.
