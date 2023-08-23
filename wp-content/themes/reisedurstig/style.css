@@ -565,7 +565,7 @@ a.thumb-a img:hover {
     position: relative;
 }
 .d-flex.min-vh-50.video-cnt {
-    height: ´50vh !important;
+    height: 60vh !important;
 }
 .d-flex.min-vh-100.video-cnt {
     height: 85vh !important;
