@@ -10,7 +10,7 @@
     <body>
         <!-- Hero -->
         <div class="position-relative overflow-hidden">
-            <div class="d-flex min-vh-100 video-cnt" lc-helper="video-bg">
+            <div class="d-flex min-vh-50 video-cnt header-md" lc-helper="video-bg">
                 <!-- Video -->
                 <!-- Für das Ermöglichen der Auswahl im Customizer -->
                <!-- Dieser Code zeigt das ausgewählte Hero Video für die Stadt-Archivseite an -->
@@ -25,23 +25,7 @@
                 // Wenn eine URL vorhanden ist, das Video anzeigen
                 if ( ! empty( $hero_video_search_url ) ) :
                 ?>
-                    <video
-                        class="position-absolute w-100 header-video-bg"
-                        autoplay=""
-                        preload=""
-                        muted=""
-                        loop=""
-                        playsinline="">
-                        <source
-                            src="<?php echo esc_url( $hero_video_search_url ); ?>"
-                            type="video/mp4">
-                    </video>
-                <?php endif; ?>
-
-
-
-
-                <!-- <video
+                <video
                     class="position-absolute w-100 header-video-bg"
                     autoplay=""
                     preload=""
@@ -49,9 +33,11 @@
                     loop=""
                     playsinline="">
                     <source
-                        src="<?php echo get_template_directory_uri(); ?>/assets/videos/istanbul.mp4"
+                        src="<?php echo esc_url( $hero_video_search_url ); ?>"
                         type="video/mp4">
-                </video> -->
+                </video>
+                <?php endif; ?>
+
                 <div class="overlay"></div>
                 <div class="header-cnt">
                     <div class="rd-header-wrapper">
@@ -61,7 +47,6 @@
                         <!-- Navbar -->
                         <?php get_template_part('template-parts/navbar'); ?>
                     </div>
-
                     <!-- Hero-Container -->
                     <div class="container hero-cnt">
                         <!-- Hero-Title -->
@@ -69,17 +54,12 @@
                             style="z-index:2"
                             class="align-self-center text-center text-light col-md-8 offset-md-2">
                             <div class="lc-block mb-4">
-                                <div editable="rich">
+                            <div editable="rich">
                                     <h1 class="display-1 hero-hdl">Suchergebnisse</h1>
-                                    <!-- <p class="hdl-subliner">Erkunde die Vielfalt unserer Städte - Städtearchive entdecken</p> -->
                                 </div>
                             </div>
                         </div>
                     </div>
-                     <!-- Down Arrow Icon -->
-                     <p class="footer-text-p footer-icons hero-arrow-icon stadt-arrow">
-                            <i class="fa fa-angle-double-down"></i>
-                    </p>
                 </div>
             </div>
         </div>

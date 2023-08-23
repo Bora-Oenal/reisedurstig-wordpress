@@ -138,6 +138,9 @@ h2.single-post-title {
 .hero-cnt-single {
     padding: 40px 0 0 !important;
 }
+.min-vh-50 {
+    min-height: 50vh !important;
+}
 .header-cnt {
     padding: 30px;
     display: flex;
@@ -553,9 +556,16 @@ a.thumb-a img:hover {
     -o-transform: scale(1.1);
 }
 /* Startpage */
+.d-flex.min-vh-50 {
+    flex-direction: column;
+    position: relative;
+}
 .d-flex.min-vh-100 {
     flex-direction: column;
     position: relative;
+}
+.d-flex.min-vh-50.video-cnt {
+    height: ´50vh !important;
 }
 .d-flex.min-vh-100.video-cnt {
     height: 85vh !important;
