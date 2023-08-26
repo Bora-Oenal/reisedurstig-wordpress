@@ -6,6 +6,8 @@
         <?php wp_head();?>
     </head>
     <body>
+        <!-- ProgressBar -->
+        <?php get_template_part( 'template-parts/scrollProgressSection' );?>
         <!-- Hero -->
         <div class="position-relative overflow-hidden">
             <div class="d-flex min-vh-100 video-cnt" lc-helper="video-bg">

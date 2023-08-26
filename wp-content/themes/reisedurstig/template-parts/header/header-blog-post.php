@@ -8,6 +8,8 @@
     </head>
 
     <body>
+        <!-- ProgressBar -->
+        <?php get_template_part( 'template-parts/scrollProgressSection' );?>
         <!-- Hero -->
         <div class="position-relative overflow-hidden single-cnt">
             <div class="d-flex min-vh-100 video-cnt video-cnt-single" lc-helper="video-bg">
