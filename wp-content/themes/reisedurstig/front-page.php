@@ -22,8 +22,9 @@
             <a href="<?php the_permalink()?>"></a>
             <div class="col-sm-12 card card-rd">
                 <a href="<?php the_permalink();?>" class="thumb-a">
-                    <?php the_post_thumbnail('cityBoxImagesThumbnails', array('class' =>
-                'card-img-top', 'alt' => '...')); ?>
+                    <?php $title = get_the_title();
+                    the_post_thumbnail('cityBoxImagesThumbnails', array('class' =>
+                'card-img-top', 'alt' => $title)); ?>
                 </a>
                 <div class="card-body">
                     <h5 class="card-title news-section"">
@@ -82,8 +83,9 @@
             <a href="<?php the_permalink()?>"></a>
             <div class="col-sm-12 card card-rd">
                 <a href="<?php the_permalink();?>" class="thumb-a">
-                    <?php the_post_thumbnail('cityBoxImagesThumbnails', array('class' =>
-                'card-img-top', 'alt' => '...')); ?>
+                    <?php $title = get_the_title();
+                    the_post_thumbnail('cityBoxImagesThumbnails', array('class' =>
+                'card-img-top', 'alt' => $title)); ?>
                 </a>
                 <div class="card-body">
                     <h5 class="card-title">
@@ -216,8 +218,9 @@
             <a href="<?php the_permalink()?>"></a>
             <div class="col-sm-12 card card-rd">
                 <a href="<?php the_permalink();?>" class="thumb-a">
-                    <?php the_post_thumbnail('cityBoxImagesThumbnails', array('class' =>
-                'card-img-top', 'alt' => '...')); ?>
+                    <?php $title = get_the_title();
+                    the_post_thumbnail('cityBoxImagesThumbnails', array('class' =>
+                'card-img-top', 'alt' => $title)); ?>
                 </a>
                 <div class="card-body">
                     <h5 class="card-title">
@@ -284,8 +287,9 @@
             <a href="<?php the_permalink()?>"></a>
             <div class="col-sm-12 card card-rd">
                 <a href="<?php the_permalink();?>" class="thumb-a">
-                    <?php the_post_thumbnail('cityBoxImagesThumbnails', array('class' =>
-                'card-img-top', 'alt' => '...')); ?>
+                    <?php $title = get_the_title();
+                    the_post_thumbnail('cityBoxImagesThumbnails', array('class' =>
+                'card-img-top', 'alt' => $title)); ?>
                 </a>
                 <div class="card-body">
                     <h5 class="card-title">
@@ -394,8 +398,9 @@
                 <div class="col-sm-4">
                     <div class="flx-circle-post">
                         <div class="col-m-12 card card-rd">
-                            <?php the_post_thumbnail('cityBoxImagesThumbnails', array('class' =>
-                            'card-img-top', 'alt' => '...')); ?>
+                            <?php $title = get_the_title();
+                            the_post_thumbnail('cityBoxImagesThumbnails', array('class' =>
+                            'card-img-top', 'alt' => $title)); ?>
                             <div class="card-body">
                                 <h5 class="card-title beach-section">
                                     <a href="<?php the_permalink(); ?>">
