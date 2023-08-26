@@ -92,8 +92,9 @@
             <a href="<?php the_permalink()?>"></a>
             <div class="col-sm-12 card card-rd">
                 <a href="<?php the_permalink();?>" class="thumb-a">
-                    <?php echo get_the_post_thumbnail(get_the_ID(), 'full', array('class' =>
-                'card-img-top', 'alt' => '...')); ?>
+                    <?php $altTag = get_the_title();
+                    echo get_the_post_thumbnail(get_the_ID(), 'full', array('class' =>
+                'card-img-top', 'alt' => $altTag)); ?>
                 </a>
                 <div class="card-body">
                     <h5 class="card-title">

@@ -18,8 +18,9 @@
             <div class="col-sm-4 city-box-archive">
                 <div class="city-box-wrapper card">
                     <div class="post-item">
-                        <?php the_post_thumbnail('cityBoxImagesThumbnails', array('class' =>
-                                        'card-img-top', 'alt' => '...')); ?>
+                        <?php $altTag = get_the_title();
+                        the_post_thumbnail('cityBoxImagesThumbnails', array('class' =>
+                                        'card-img-top', 'alt' => $altTag)); ?>
                         <h2 class="h1 h1-style city-archive">
                             <a class="" href="<?php the_permalink();?>"><?php the_title();?></a>
                         </h2>

@@ -30,8 +30,9 @@ ARCHIVE-LAND.PHP
                 <div class="post-item">
                     <!-- was auch geht -->
                     <!-- the_post_thumbnail('medium'); large , full -->
-                    <?php the_post_thumbnail('cityBoxImagesThumbnails', array('class' =>
-                                    'card-img-top', 'alt' => '...')); ?>
+                    <?php $altTag = get_the_title();
+                    the_post_thumbnail('cityBoxImagesThumbnails', array('class' =>
+                                    'card-img-top', 'alt' => $altTag)); ?>
                     <h2 class="h1 h1-style city-archive">
                         <a class="" href="<?php the_permalink();?>"><?php the_title();?></a>
                     </h2>
