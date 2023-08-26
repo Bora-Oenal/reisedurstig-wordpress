@@ -9,6 +9,9 @@
 </head>
 
 <body>
+<div class="scroll-progress">
+    <span id="progress-bar"></span>
+  </div>
     <!-- Hero -->
     <div class="position-relative overflow-hidden">
         <div class="d-flex min-vh-100 video-cnt" lc-helper="video-bg">
