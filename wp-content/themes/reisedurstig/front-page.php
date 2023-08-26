@@ -411,9 +411,9 @@
                                 <p>
                                 <!-- Abfrage-> wenn excerpt zeige an, sonst zeige the_content -->
                                     <?php if (has_excerpt()) {
-                                        echo wp_trim_words(get_the_content(), 17);
+                                        echo wp_trim_words(get_the_content(), 7);
                                     } else {
-                                        wp_trim_words(get_the_excerpt(), 17);
+                                        wp_trim_words(get_the_excerpt(), 7);
                                     } ?>
                                 </p>
                                 <!-- <hr> -->

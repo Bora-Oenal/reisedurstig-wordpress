@@ -27,7 +27,15 @@
                         <a class="land-archive-a" href="<?php echo home_url('/land/' . sanitize_title(get_field('land'))); ?>"><?php echo get_field('land'); ?></a>
                     </div>
                     <div class="generic-code">
-                        <?php the_excerpt(); ?>
+                    <p>
+                        <?php
+                            if ( !empty(get_the_content()) ) {
+                                echo wp_trim_words(get_the_content(), 13);
+                            } else {
+                                echo wp_trim_words(get_the_excerpt(), 13);
+                            }
+                        ?> 
+                    </p>
                         <p>
                             <?php $reisedatum = get_post_meta(get_the_ID(), 'reisedatum', true); if
                             ($reisedatum) { $travelTime = new DateTime($reisedatum); echo

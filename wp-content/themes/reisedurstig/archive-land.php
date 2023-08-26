@@ -47,7 +47,15 @@ ARCHIVE-LAND.PHP
                     </p>
                 </div>
                 <div class="generic-code">
-                    <!-- <?php the_excerpt(); ?> -->
+                <p>
+                    <?php
+                        if ( !empty(get_the_content()) ) {
+                            echo wp_trim_words(get_the_content(), 13);
+                        } else {
+                            echo wp_trim_words(get_the_excerpt(), 13);
+                        }
+                    ?> 
+                </p>
                     <p>
                     <?php
                         $reisedatum = get_post_meta(get_the_ID(), 'reisedatum', true);

@@ -27,7 +27,16 @@
                     </div>
 
                     <div class="generic-code">
-                        <?php the_excerpt(); ?>
+                        <!-- Abfrage-> wenn excerpt zeige an, sonst zeige the_content -->
+                        <p>
+                        <?php
+                            if ( !empty(get_the_content()) ) {
+                                echo wp_trim_words(get_the_content(), 13);
+                            } else {
+                                echo wp_trim_words(get_the_excerpt(), 13);
+                            }
+                        ?> 
+                        </p>
                         <p>
                             <a href="<?php the_permalink()?>" class="btn btn-posts btn-startpage btn-city-arcvive">Mehr zu
                                 <?php the_title();?>

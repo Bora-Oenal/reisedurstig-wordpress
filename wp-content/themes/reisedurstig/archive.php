@@ -27,7 +27,15 @@
         </div>
         <div class="generic-code">
             <p class="card-text"><?php echo wp_trim_words(get_the_excerpt(), 30 ); ?></p>
-            <!-- <?php the_excerpt(); ?> -->
+            <p>
+                <?php
+                    if ( !empty(get_the_content()) ) {
+                        echo wp_trim_words(get_the_content(), 13);
+                    } else {
+                        echo wp_trim_words(get_the_excerpt(), 13);
+                    }
+                ?> 
+            </p>
             <p>
                 <a class="btn btn-posts btn-startpage" href="<?php the_permalink() ?>">Mehr erfahren &raquo</a>
                 <br>
