@@ -364,11 +364,19 @@ input#searchsubmit:hover {
     align-items: center;
     display: flex;
 }
+#search-icon i.fa.fa-search:hover {
+    color: #FFD600;
+}
 .search-form .search-submit {
     display: none;
 }
 
 /* Search Ajax */
+.container.search-result-cnt {
+    height: 100px;
+    position: relative;
+    top: 64px;
+}
 .search-overlay__top {
     position: relative;
     top: 35px;
@@ -1384,6 +1392,35 @@ p.has-text-align-center {
     font-size: 25px;
     font-weight: 400;
 }
+.container.page-content-cnt {
+    padding: 20px 0;
+}
+figure.alignright.size-full.is-resized {
+    text-align: right;
+}
+img.wp-image-394 {
+    border-radius: 90%;
+}
+p.about-marg-top {
+    margin-top: 24px;
+}
+p.quote-p.quote-new.has-text-align-center{
+    font-size: 18px;
+    color: #063366;
+    padding: 20px;
+    font-weight: 600;
+    background: #FFD600;
+    margin-top:20px;
+    width: 100%;
+}
+p.quote-p.has-text-align-center {
+    font-size: 18px;
+    color: #FFD600;
+    padding: 20px;
+    font-weight: 400;
+    background: #063366;
+    margin-top:20px;
+}
 /* News-Page */
 .card-body.city-box {
     padding: 10px;
@@ -1422,6 +1459,10 @@ a.btn.btn-posts.btn-startpage.news-box {
 }
 h2.wp-block-heading {
     margin-top: 40px;
+}
+h2.wp-block-heading,
+h3.wp-block-heading {
+    width: 100%;
 }
 /* Insta-Feed-Section */
 .container-md.counter-cnt.insta-cnt {

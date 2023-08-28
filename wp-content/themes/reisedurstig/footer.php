@@ -181,11 +181,10 @@
             <i class="fa fa-window-close search-overlay__close" aria-hidden="true"></i>
         </div>
         </div>
-        
-        <div class="container">
+        <!-- Result-Div -->
+        <div class="container search-result-cnt">
         <div id="search-overlay__results"></div>
         </div>
-
     </div>
 </footer>
 
