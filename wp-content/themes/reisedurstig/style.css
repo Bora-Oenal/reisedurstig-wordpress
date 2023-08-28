@@ -1367,11 +1367,15 @@ h2.related-cities-hdl {
     display: flex;
 }
 /* About Page */
-.wp-block-columns.is-layout-flex.wp-container-3 {
+/* .wp-block-columns.is-layout-flex.wp-container-3 {
     width: 1320px;
-}
+} */
 figure.wp-block-image.size-medium.is-resized.about-img img {
     border-radius: 90%;
+}
+p.has-medium-font-size {
+    width: 100%;
+    margin-top: 16px;
 }
 h2.about-hdl.wp-block-heading {
     font-size: 40px;
@@ -1420,6 +1424,15 @@ p.quote-p.has-text-align-center {
     font-weight: 400;
     background: #063366;
     margin-top:20px;
+}
+p.about-p {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+h2.wp-block-heading {
+    font-size: 3.5rem;
+    font-weight: 500;
 }
 /* News-Page */
 .card-body.city-box {

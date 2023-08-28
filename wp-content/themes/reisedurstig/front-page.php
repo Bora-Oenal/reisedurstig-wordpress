@@ -269,16 +269,19 @@
     $newestCities = new WP_Query(array( 
         'posts_per_page'=> 3, 
         'post_type' => 'stadt', 
-        'meta_key' => 'reisedatum', 
-        'orderby' => 'meta_value_num', 
-        'order' => 'ASC', // wir blenden alle vergangenen Termine aus
-        'meta_query' => array( array( 
-            'key' => 'reisedatum', 
-            'compare' => '>=', 
-            'value'=> $today, 
-            'type' => 'numeric' 
-            ) 
-        )) 
+        // 'meta_key' => 'reisedatum', 
+        'orderby' => 'rand', 
+        'order' => 'ASC'
+        // wir blenden alle vergangenen Termine aus
+        //nicht mehr nötig da alle Termine nun angezeigt werden
+        // 'meta_query' => array( array( 
+        //     'key' => 'reisedatum', 
+        //     'compare' => '>=', 
+        //     'value'=> $today, 
+        //     'type' => 'numeric' 
+        //     ) 
+        // )
+        ) 
     ); 
     while ($newestCities->have_posts()) {
         $newestCities->the_post(); ?>
