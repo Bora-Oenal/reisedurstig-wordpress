@@ -228,7 +228,9 @@
                             <?php the_title(); ?>
                         </a>
                     </h5>
-                    <p class="card-text"><?php echo  get_the_excerpt(); ?></p>
+                    <p class="card-text"><?php echo wp_trim_words(get_the_excerpt(), 10 );
+                         ?></p>
+                    
                     <!-- <p class="card-text"><?php echo wp_trim_words(get_the_content(), 10 ); ?></p> -->
                     <a href="<?php the_permalink()?>" class="btn btn-posts btn-startpage">Mehr zu
                         <?php the_title();?>
@@ -303,7 +305,8 @@
                             <?php the_field('reisedatum'); ?>
                         </p>
                     </h5>
-                    <p class="card-text"><?php echo  get_the_excerpt(); ?></p>
+                    <p class="card-text"><?php echo wp_trim_words(get_the_excerpt(), 10 );
+                         ?></p>
                     <!-- <p class="card-text"><?php echo wp_trim_words(get_the_content(), 10 ); ?></p> -->
                     <a href="<?php the_permalink()?>" class="btn btn-posts btn-startpage">Mehr zu
                         <?php the_title();?>
@@ -394,7 +397,9 @@
                 <?php 
                 $allBeaches = new WP_Query(array( 
                     'posts_per_page' => 3, 
-                    'post_type' => 'strand' )); 
+                    'post_type' => 'strand',
+                    'orderby' => 'rand', 
+                    'order' => 'ASC' )); 
                 while (
                  $allBeaches->have_posts()) { 
                     $allBeaches->the_post(); ?>

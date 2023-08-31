@@ -3,7 +3,8 @@
 // Create Custom Post Type "Länder"
 function create_custom_post_type_country(){
     register_post_type('land' , array (
-          
+      // REST-API-Unterstützung aktiviert 
+      'show_in_rest' => true,   
         /* Wenn ein neues Custom Post registriert wurde, muss man 'has_archive'
         integrieren, damit WP weis, das dieser custom post type auch einen Archive unterstützt*/
              'has_archive' => true,  

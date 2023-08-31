@@ -5,6 +5,7 @@ function create_custom_post_type_planet(){
     register_post_type('planet', array(
         /* aktiviere Archive fpr custom-type "planet" */
         'has_archive' => true,  
+        'show_in_rest' => true,
          // Stelle folgende features im Backend im Custom-Post-Type zur Verfügung die default verfügbar sind "editor und excerpt"
         'supports' => array('title' , 'editor' , 'excerpt' , 'thumbnail'),
         'public' => true,

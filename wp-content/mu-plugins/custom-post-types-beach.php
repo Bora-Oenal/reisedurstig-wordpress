@@ -3,6 +3,8 @@
 // Create Custom Post Type "Strände"
 function create_custom_post_type_strand(){
   register_post_type('strand' , array(
+    // REST-API-Unterstützung aktiviert 
+    'show_in_rest' => true,  
     /* Wenn ein neues Custom Post registriert wurde, muss man 'has_archive'
     integrieren, damit WP weis, das dieser custom post type auch einen Archive unterstützt*/
     'has_archive' => true,  

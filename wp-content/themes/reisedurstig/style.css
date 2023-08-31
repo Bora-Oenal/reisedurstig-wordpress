@@ -1361,6 +1361,10 @@ h2.related-cities-hdl {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    width:55%;
+}
+.container.single-cnt {
+    font-size: 18px;
 }
 .container.related-cities-cnt.single-cnt {
     flex-direction: row;
