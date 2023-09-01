@@ -1509,3 +1509,45 @@ h5.card-title.news-section {
 .container.container--narrow.page-section.start-page-cnt.search-result-page {
     flex-direction: column;
 }
+/*Contact Page*/
+span.wp-block-social-link-label.screen-reader-text {
+    display: none;
+}
+ul.wp-block-social-links.has-icon-color.is-style-logos-only.is-content-justification-center.is-nowrap.is-layout-flex.wp-container-3.wp-block-social-links-is-layout-flex li {
+    list-style: none;
+	padding:15px;
+}
+p.has-text-align-center,
+figure.aligncenter.size-medium.is-resized,
+h2.wp-block-heading.has-text-align-center {
+    text-align: center;
+}
+h2.wp-block-heading.has-text-align-center {
+	margin-bottom:40px;
+}
+.wp-block-columns.is-layout-flex.wp-container-5.wp-block-columns-is-layout-flex {
+    justify-content: flex-start;
+    display: flex;
+    align-items: flex-start;
+	margin-bottom:20px;
+}
+
+/* Hamburger Menu Icon */
+.navbar-toggler{
+    width: 35px;
+    height: 35px;
+    background-color: #ffd700;
+    border:none;
+}
+.navbar-toggler .line{
+    width: 100%;
+    float: left;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 5px;
+}
+.navbar-toggler-icon {
+    background-color: transparent;
+    height: 20px;
+    width: 20px;
+}
