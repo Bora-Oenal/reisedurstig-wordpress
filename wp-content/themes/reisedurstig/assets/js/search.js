@@ -1,16 +1,3 @@
-// This is the JS for the ajax search method (live-search)
-class Search {
-    constructor() {
-        
-    }
-}
-
-
-
-
-
-
-
 // This is the JS for the classic search method without ajax
 document.addEventListener('DOMContentLoaded', function() {
     const searchIcon = document.getElementById('search-icon');

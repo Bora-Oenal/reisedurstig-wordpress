@@ -1572,6 +1572,9 @@
     span.wp-block-social-link-label.screen-reader-text {
         display: none;
     }
+    label.screen-reader-text {
+        display: none;
+    }
     ul.wp-block-social-links.has-icon-color.is-style-logos-only.is-content-justification-center.is-nowrap.is-layout-flex.wp-container-3.wp-block-social-links-is-layout-flex li {
         list-style: none;
         padding:15px;

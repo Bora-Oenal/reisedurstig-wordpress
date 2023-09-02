@@ -22,7 +22,7 @@ Template Name: Search Page
                 );
 
                 $searchResults = new WP_Query($args);
-
+                   
                 while ($searchResults->have_posts()) {
                     $searchResults->the_post();
 
@@ -59,7 +59,6 @@ Template Name: Search Page
             </div>
         
             <?php 
-            // pagination shown if more than 10 posts 
             ?>
         </div>
     <!-- Right-Container -->
