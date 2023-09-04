@@ -17,7 +17,7 @@
         )); 
     while ($allPosts->have_posts()) {
         $allPosts->the_post(); ?>
-    <div class="col-sm-4 city-box">
+    <div class="col-sm-4 col-md-6 city-box">
         <div class="flx-circle-post">
             <a href="<?php the_permalink()?>"></a>
             <div class="col-sm-12 card card-rd">
@@ -78,7 +78,7 @@
         )); 
     while ($alleInseln->have_posts()) {
         $alleInseln->the_post(); ?>
-    <div class="col-sm-4 city-box">
+    <div class="col-sm-4 col-md-6 city-box">
         <div class="flx-circle-post">
             <a href="<?php the_permalink()?>"></a>
             <div class="col-sm-12 card card-rd">
@@ -213,7 +213,7 @@
         )); 
     while ($newestCountries->have_posts()) {
         $newestCountries->the_post(); ?>
-    <div class="col-sm-4 city-box">
+    <div class="col-sm-4 col-md-6 city-box">
         <div class="flx-circle-post">
             <a href="<?php the_permalink()?>"></a>
             <div class="col-sm-12 card card-rd">
@@ -287,7 +287,7 @@
     ); 
     while ($newestCities->have_posts()) {
         $newestCities->the_post(); ?>
-    <div class="col-sm-4 city-box">
+    <div class="col-sm-4 col-md-6 city-box">
         <div class="flx-circle-post">
             <a href="<?php the_permalink()?>"></a>
             <div class="col-sm-12 card card-rd">
@@ -380,7 +380,7 @@
 </div>
 
 <!-- Strände Section -->
-<div class="container-md counter-cnt">
+<div class="container city-section-cnt">
     <div class="page-content-cnt">
         <!-- Custom-Post-Type-Title -->
         <?php
@@ -403,7 +403,7 @@
                 while (
                  $allBeaches->have_posts()) { 
                     $allBeaches->the_post(); ?>
-                <div class="col-sm-4">
+                <div class="col-sm-4  col-md-6">
                     <div class="flx-circle-post">
                         <div class="col-m-12 card card-rd">
                             <?php $title = get_the_title();
