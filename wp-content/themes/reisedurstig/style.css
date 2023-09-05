@@ -145,11 +145,11 @@
                 display: none!important;
             }
         }
-        @media only screen and (max-width: 992px) {
+        @media only screen and (min-width: 500px) and (max-width: 825px) {
             div#navbarText {
-                display: flex!important;
-                flex-direction: column;
-            }
+				display: flex!important;
+				flex-direction: column;
+			}
         }
         @media only screen and (min-width: 1200px) {
             #search-form {
