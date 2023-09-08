@@ -1,4 +1,4 @@
-/*
+        /*
         Theme Name: reisedurstig
         Theme URI: https://reisedurstig.de
         Author: Bora Ö.
@@ -111,7 +111,7 @@
             height: 100%;
             background-color: #FFD600;
         }
-        
+
         .overlay {
             position: absolute;
             top: 0;
@@ -121,7 +121,7 @@
             height: 100vh;
             /* 75 % der Höhe des Viewports */
             background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
-        
+
             /* Linearer Farbverlauf von oben schwarz nach unten transparent */
         }
         /* Header variations */
@@ -145,10 +145,9 @@
                 display: none!important;
             }
         }
-        @media only screen and (min-width: 500px) and (max-width: 825px) {
-            div#navbarText {
-                display: flex!important;
-                flex-direction: column;
+        @media only screen and (max-width: 992px) {
+            .containerjustify-content-center.m-4.header-social-icon-cnt{
+                display: none;
             }
         }
         @media only screen and (min-width: 1200px) {
@@ -162,6 +161,8 @@
             }
         }
         
+
+
         .header-video-bg,
         .header-video-single-bg {
             z-index: 1;
@@ -221,7 +222,7 @@
         .rd-header-wrapper.startpg-logo {
             padding: 0;
         }
-        
+
         ul.navbar-nav.mr-auto.menu-tablet-in-row {
             display: flex;
             flex-direction: row;
@@ -270,11 +271,11 @@
                 flex-direction: column;
             }
         }
-        
+
         ul.navbar-nav.mr-auto {
             align-items: center;
         }
-        
+
         a.nav-link,
         a.navbar-brand {
             color: white;
@@ -285,7 +286,7 @@
             object-fit: contain;
             height: 65px;
         }
-        
+
         ul.navbar-nav.mr-auto li a {
             font-size: 14px;
             letter-spacing: 2px;
@@ -293,7 +294,7 @@
             font-weight: 400;
             text-transform: uppercase;
         }
-        
+
         a.navbar-brand.logo-a {
             display: flex;
             justify-content: center;
@@ -344,7 +345,7 @@
             cursor: pointer;
             padding: 10px;
         }
-        
+
         #search-form {
             display: none;
             /* position: absolute; */
@@ -396,7 +397,7 @@
         .search-form .search-submit {
             display: none;
         }
-        
+
         /* Search Ajax */
         .container.search-result-cnt {
             height: 100px;
@@ -431,7 +432,8 @@
             justify-content: center;
             flex-direction: column;
         }
-        
+
+
         .display-1.hero-hdl.h1,
         h1.display-1.hero-hdl {
             font-size: 4rem;
@@ -490,8 +492,8 @@
             ul.navbar-nav.mr-auto li a {
                 font-weight: 600;
             }
-            .card-body p,
             .text-uppercase.fw-bold.mb-4 p,
+            .card-body p,
             h5.card-title.news-section,
             p.card-text {
                 text-align: center;
@@ -508,8 +510,8 @@
             .footer-col {
                 align-items: center;
             }
-            .footer-adress-content,
-            p.footer-text-p.footer-icons {
+            p.footer-text-p.footer-icons,
+            .footer-adress-content {
                 width: unset!important;
             }
             .footer-adress-content {
@@ -524,7 +526,7 @@
             p {
                 font-size: 16px;
             }
-            #menu-footermenu {
+            #menu-footermenu{
                 padding: 0;
             }
             a.btn.btn-posts {
@@ -715,7 +717,7 @@
             display: flex;
             flex-direction: row;
         }
-        
+
         img.card-img-left.profile-about-img {
             width: 280px;
             border-radius: 180px;
@@ -724,22 +726,22 @@
             -ms-border-radius: 180px;
             -o-border-radius: 180px;
         }
-        
+
         .card.flex-card {
             border: none;
             gap: 40px;
         }
-        
+
         .card-title.about-card-title.h2,
         h2.card-title.about-card-title {
             font-size: 3rem;
         }
-        
+
         .card-body.about-card-bdy {
             display: flex;
             justify-content: center;
         }
-        
+
         p.body-basic-txt {
             font-size: 18px;
             line-height: 28px;
@@ -749,24 +751,24 @@
             margin-right: 40px;
             text-align: justify;
         }
-        
+
         .body-basic-txt.quote-brand-col-txt {
             color: #063366;
             font-style: italic;
         }
-        
+
         img.card-img-left.about-txt-img {
             width: 420px;
             border-radius: 20px;
             -o-object-fit: cover;
             object-fit: cover;
         }
-        
+
         .card-title.about-card-title.h2,
         h2.card-title.about-card-title {
             margin: 40px 0 0;
         }
-        
+
         img.card-img-left.about-txt-img-left {
             margin-right: 25px;
             height: 400px;
@@ -774,16 +776,16 @@
             -o-object-fit: cover;
             object-fit: cover;
         }
-        
+
         .card.cards-rd {
             min-width: 300px;
         }
-        
+
         .cards-container {
             display: flex;
             gap: 30px;
         }
-        
+
         a.btn.btn-primary.card-btn {
             background-color: #063366;
             border: none;
@@ -794,7 +796,7 @@
             border: none;
             color: #063366;
         }
-        
+
         p.hdl-subliner {
             font-size: 2rem;
         }
@@ -840,11 +842,11 @@
         }
         a.land-archive-a {
             margin-left: 10px;
-        
+
         }
         .generic-code,
         h2.h1.h1-style.city-archive {
-        
+
             padding: 0 10px;
         }
         h5.card-title a {
@@ -915,16 +917,16 @@
             line-height: 26px;
             margin: 0 10px 0 0;
         }
-        
+
         .counter-subheadline span {
             float: right;
         }
-        
+
         .medium-icon {
             font-size: 40px !important;
             margin-bottom: 15px !important;
         }
-        
+
         .counter-box {
             width: 33%;
             display: flex;
@@ -933,13 +935,13 @@
             align-items: center;
             justify-content: center;
         }
-        
+
         span.timer.counter.alt-font.appear {
             font-size: 4rem;
             font-weight: 400;
             color: #063366;
         }
-        
+
         p.counter-title,
         span.counter-title {
             margin: 0;
@@ -952,23 +954,23 @@
             display: block;
             letter-spacing: 2px;
         }
-        
+
         .counter-title {
             font-size: 12px;
             letter-spacing: 2px;
             text-transform: uppercase;
         }
-        
+
         .counter-icon {
             top: 25px;
             position: relative;
         }
-        
+
         .counter-style2 .counter-title {
             letter-spacing: 0.55px;
             float: left;
         }
-        
+
         .counter-style2 span.counter {
             letter-spacing: 0.55px;
             float: left;
@@ -978,12 +980,12 @@
             display: flex;
             flex-direction: column;
         }
-        
+
         .counter-section i {
             display: block;
             margin: 0 0 10px;
         }
-        
+
         /* Single-Post */
         p.meta-infos-p {
             display: flex;
@@ -1257,7 +1259,7 @@
         .col-sm-4.city-box {
             margin: 0 0 40px;
         }
-        
+
         /* Städte Archiv */
         .post-item {
             margin-bottom: 0;
@@ -1413,7 +1415,7 @@
         .img-related-city.hover14 {
             background: #FFD600;
         }
-        
+
         /* Länder Archiv */
         .land-box-wrapper {
             display: flex;
@@ -1440,7 +1442,7 @@
             display: flex;
             justify-content: center;
             flex-direction: column;
-            width: 55%;
+            width:55%;
         }
         .container.single-cnt {
             font-size: 18px;
@@ -1451,8 +1453,8 @@
         }
         /* About Page */
         /* .wp-block-columns.is-layout-flex.wp-container-3 {
-                    width: 1320px;
-                } */
+            width: 1320px;
+        } */
         figure.wp-block-image.size-medium.is-resized.about-img img {
             border-radius: 90%;
         }
@@ -1491,13 +1493,13 @@
         p.about-marg-top {
             margin-top: 24px;
         }
-        p.quote-p.quote-new.has-text-align-center {
+        p.quote-p.quote-new.has-text-align-center{
             font-size: 18px;
             color: #063366;
             padding: 20px;
             font-weight: 600;
             background: #FFD600;
-            margin-top: 20px;
+            margin-top:20px;
             width: 100%;
         }
         p.quote-p.has-text-align-center {
@@ -1506,7 +1508,7 @@
             padding: 20px;
             font-weight: 400;
             background: #063366;
-            margin-top: 20px;
+            margin-top:20px;
         }
         p.about-p {
             width: 100%;
@@ -1527,8 +1529,8 @@
             h2.wp-block-heading {
                 margin-bottom: 30px;
             }
-            .wp-block-columns.are-vertically-aligned-center.is-layout-flex.wp-container-3.wp-block-columns-is-layout-flex,
-            .wp-block-columns.is-layout-flex.wp-container-12.wp-block-columns-is-layout-flex {
+            .wp-block-columns.is-layout-flex.wp-container-12.wp-block-columns-is-layout-flex,
+            .wp-block-columns.are-vertically-aligned-center.is-layout-flex.wp-container-3.wp-block-columns-is-layout-flex {
                 display: flex;
                 flex-direction: column-reverse;
             }
@@ -1540,15 +1542,16 @@
                 flex-direction: column;
                 align-items: center;
             }
-            .wp-block-columns.is-layout-flex.wp-container-15.wp-block-columns-is-layout-flex,
-            .wp-block-columns.is-layout-flex.wp-container-18.wp-block-columns-is-layout-flex,
             .wp-block-columns.is-layout-flex.wp-container-21.wp-block-columns-is-layout-flex,
-            .wp-block-columns.is-layout-flex.wp-container-6.wp-block-columns-is-layout-flex,
-            .wp-block-columns.is-layout-flex.wp-container-9.wp-block-columns-is-layout-flex {
+            .wp-block-columns.is-layout-flex.wp-container-18.wp-block-columns-is-layout-flex,
+            .wp-block-columns.is-layout-flex.wp-container-15.wp-block-columns-is-layout-flex,
+            .wp-block-columns.is-layout-flex.wp-container-9.wp-block-columns-is-layout-flex,
+            .wp-block-columns.is-layout-flex.wp-container-6.wp-block-columns-is-layout-flex {
                 display: flex;
                 flex-direction: column;
             }
         }
+
         @media only screen and (max-width: 992px) {
             img.wp-image-394 {
                 width: 150px;
@@ -1556,34 +1559,8 @@
                 top: -30px;
                 position: relative;
             }
-            blockquote.wp-block-quote.has-text-align-center.is-style-default {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
         }
-        @media only screen and (max-width: 500px) {
-        
-            .wp-block-columns.is-layout-flex.wp-container-9.wp-block-columns-is-layout-flex {
-                flex-direction: column;
-            }
-        }
-        @media only screen and (min-width: 760px) and (max-width: 992px) {
-        
-            .wp-block-column.is-layout-flow.wp-block-column-is-layout-flow {
-                flex-basis: 35%!important;
-            }
-            .wp-block-column.is-layout-flow.wp-block-column-is-layout-flow {
-                flex-basis: 65%!important;
-            }
-            .wp-block-columns.is-layout-flex.wp-container-9.wp-block-columns-is-layout-flex {
-                flex-direction: row-reverse;
-            }
-        }
-        .wp-block-columns.is-layout-flex.wp-container-6.wp-block-columns-is-layout-flex {
-            margin-bottom: 30px;
-        }
-        
+
         /* News-Page */
         .card-body.city-box {
             padding: 10px;
@@ -1644,13 +1621,13 @@
             font-size: 16px!important;
             margin-top: 40px !important;
         }
-        
+
         /* Strand Section Startpage */
         h5.card-title.beach-section,
         h5.card-title.news-section {
             margin-bottom: 12px;
         }
-        
+
         /* Search Result Page  */
         .container.container--narrow.page-section.start-page-cnt.search-result-page {
             flex-direction: column;
@@ -1664,31 +1641,31 @@
         }
         ul.wp-block-social-links.has-icon-color.is-style-logos-only.is-content-justification-center.is-nowrap.is-layout-flex.wp-container-3.wp-block-social-links-is-layout-flex li {
             list-style: none;
-            padding: 15px;
+            padding:15px;
         }
+        p.has-text-align-center,
         figure.aligncenter.size-medium.is-resized,
-        h2.wp-block-heading.has-text-align-center,
-        p.has-text-align-center {
+        h2.wp-block-heading.has-text-align-center {
             text-align: center;
         }
         h2.wp-block-heading.has-text-align-center {
-            margin-bottom: 40px;
+            margin-bottom:40px;
         }
         .wp-block-columns.is-layout-flex.wp-container-5.wp-block-columns-is-layout-flex {
             justify-content: flex-start;
             display: flex;
             align-items: flex-start;
-            margin-bottom: 20px;
+            margin-bottom:20px;
         }
-        
+
         /* Hamburger Menu Icon */
-        .navbar-toggler {
+        .navbar-toggler{
             width: 35px;
             height: 35px;
             background-color: #ffd700;
-            border: none;
+            border:none;
         }
-        .navbar-toggler .line {
+        .navbar-toggler .line{
             width: 100%;
             float: left;
             height: 2px;
@@ -1700,4 +1677,3 @@
             height: 20px;
             width: 20px;
         }
-        

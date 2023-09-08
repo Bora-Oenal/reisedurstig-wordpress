@@ -22,7 +22,7 @@
                         'value' => $today, 
                         'type' => 'numeric' ) ) ));
                 while($neuesteStadt->have_posts()){ $neuesteStadt->the_post(); ?>
-                <div class="col-sm-4 city-box-archive">
+                <div class="col-12 col-md-6 col-lg-4 city-box-archive">
                     <div class="city-box-wrapper card">
                         <div class="post-item">
                             <?php $altTag = get_the_title();
